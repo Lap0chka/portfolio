@@ -1,0 +1,39 @@
+<head>
+  <style>
+    .form-popup{
+    display:none;
+    }
+    form input{
+    width:100%;
+    text-align:center;
+    }
+  </style>
+</head>
+<body>
+
+<button class="open-button" onclick="openForm()">Suggest news</button>
+
+<div class="form-popup" id="myForm">
+  <form action="{% url 'blog' %}" method="post">
+    {% csrf_token %}
+    <h1>News</h1>
+    <label for="title"><b>Title</b></label>
+    {{form.title}}
+    <label for="psw"><b>Description</b></label>
+    {{form.description}}
+    <label for="psw"><b>Link to article(source)</b></label>
+    {{form.link}}
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
