@@ -1,0 +1,29 @@
+{%extends 'portfolio/base.html' %}
+{%load static%}
+{%block title %}{{object.title}}{% endblock %}
+<style>
+     b{
+    color:black;
+    }
+</style>
+{%block menu%}
+
+  <li><a href="{% url 'blog' %}" style="color: orange;" class="">Back</a></li>
+{%endblock%}
+
+{%block context%}
+
+                    <div class="column-center">
+                        <h3 class="text-title" style="text-align:center ">
+                            <br>{{object.title}}
+                        </h3>
+                        <p class="text-title" style="margin-left:5%;margin-right:5%;text-align:justify">{{object.arrticle|safe}}</p>
+                    </div>
+
+{%endblock%}
+
+{%block blogs%}
+{%endblock%}
+{%block footer%}
+{%endblock%}
+

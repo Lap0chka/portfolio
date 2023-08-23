@@ -1,0 +1,446 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>{%block title%}Hello{%endblock%}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+
+    <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+
+        <!-- ## site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Hello</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        {%block menu%}
+                            <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                            <li><a href="#about" class="smoothscroll">About</a></li>
+                            <li><a href="#works" class="smoothscroll">Works</a></li>
+                            <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                            <li><a href="{% url 'blog' %}" style="color: orange;" class="">Blog</a></li>
+                        {%endblock%}
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+{%block context%}
+        <!-- ## main content
+        ==================================================- -->
+        <main class="s-content">
+
+
+            <!-- ### intro
+            ================================================== -->
+            <section id="intro" class="s-intro target-section">
+
+                <div class="row intro-content wide">
+
+                    <div class="column-center">
+
+                        <h1 class="text-huge-title">
+                            I am Daniil, <br>
+                            a backend <br> 
+                            developer  <br>
+                            in Somewhere.
+                        </h1>
+                    </div>
+
+                
+
+                </div> <!-- end intro content -->
+
+                <a href="#about" class="intro-scrolldown smoothscroll">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                </a>
+
+            </section> <!-- end s-intro -->
+
+
+            <!-- ### about
+            ================================================== -->
+            <section id="about" class="s-about target-section">
+
+
+                <div class="row about-info wide" data-animate-block>
+
+                    <div class="column lg-6 md-12 about-info__pic-block">
+                        <img src="{%static 'images/about-photo.jpg'%}"
+                             srcset="{%static 'images/about-photo.jpg'%} 1x, {%static 'images/about-photo@2x.jpg'%} 2x" alt="" class="about-info__pic" data-animate-el>
+                    </div>
+
+                    <div class="column lg-6 md-12">
+                        <div class="about-info__text" >
+
+                            <h2 class="text-pretitle with-line" data-animate-el>
+                                About
+                            </h2>
+                            <p class="attention-getter" data-animate-el>
+
+Hello! My name is Daniel, I'm 25 years old, and I come from Ukraine. Currently, I am residing in Berlin and actively seeking a position as a Django developer. My skill set includes a profound understanding of the Django framework, experience in building web applications using Python, as well as knowledge of databases and working with ORM. My goal is to apply my knowledge and skills to create efficient and innovative web projects.
+                                I believe that quality development requires not only technical expertise but also the ability to communicate effectively within a team. My communicative nature and teamwork skills will assist me in collaborating with colleagues and clients to produce products that meet high standards.
+                                I appreciate your interest in exploring potential collaboration opportunities. Thank you for taking the time to consider my background and skills. If you have any questions or would like to discuss further, please feel free to reach me. I'm looking forward to the possibility of working together.
+                            </p>
+                            <a href="{% static 'cv.pdf' %}" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+
+                        </div>
+                    </div>
+                </div> <!-- about-info -->
+
+
+                <div class="row about-expertise" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
+
+                        <ul class="skills-list h1" data-animate-el>
+                            <li>Python developer</li>
+                            <li>Django developer</li>
+                        </ul>
+
+                    </div>
+                </div> <!-- end about-expertise -->
+
+
+                <div class="row about-timelines" data-animate-block>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Experience
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h3 class="timeline__title">СС Kharkov</h3>
+                                    <h5 class="timeline__meta">Junior System Administrator</h5>
+                                    <p class="timeline__timeframe">August 2021 - January 2022</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>
+                                        For a year, I worked as an assistant to a system administrator, actively contributing to maintaining a stable and efficient IT infrastructure. My responsibilities encompassed supporting and maintaining servers, configuring network devices, and addressing day-to-day technical issues faced by users.
+
+During my tenure, I successfully executed routine tasks such as software installations and updates, monitoring system resources, and performing data backups. Furthermore, I collaborated closely with more experienced colleagues, learning from them and applying gained knowledge in practical scenarios.
+
+My role also involved training users in the basics of IT systems, providing assistance with technical inquiries, and troubleshooting malfunctions. This experience enhanced my communication skills and my ability to find effective solutions in resource-constrained situations.
+
+Working as an assistant to a system administrator afforded me valuable experience in IT system management, equipping me to adeptly handle technical challenges within a dynamic environment.
+                                    </p>
+                                </div>
+                            </div>
+    
+    
+                        </div> <!-- end timeline -->
+
+                    </div> <!-- end column -->
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Education
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h3 class="timeline__title">KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS</h3>
+                                    <h5 class="timeline__meta">CyberSecuarity</h5>
+                                    <p class="timeline__timeframe">April 2016 - June 2020</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Cybersecurity is a set of tools, strategies, security principles, security assurances, risk management approaches, actions, training, insurance and technologies used to protect cyber media, resources of organizations and users. Cybersecurity provides for the achievement and conservation of security features of the resources of the organization or users directed against the corresponding cyber threats.</p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">
+                                        Kyiv National Economic University Romny college</h4>
+                                    <h5 class="timeline__meta">System Administrator</h5>
+                                    <p class="timeline__timeframe">August 2012 - June 2016</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>I studied at Romensky College of Kyiv National Economic University (KNEU) for 4 years, specializing in System Administration. During my time there, I gained in-depth knowledge and skills in managing and maintaining information systems, configuring servers, handling network devices, ensuring system security, and providing technical support to users. This comprehensive education has equipped me with the expertise needed to excel in the field of System Administration.</p>
+                                </div>
+                            </div>
+    
+                        </div> <!-- end timeline -->
+                        
+                    </div> <!-- end column -->
+
+
+                </div> <!-- end about-timelines -->
+
+            </section> <!-- end s-about -->
+
+{%endblock%}
+            <!-- ### works
+            ================================================== -->
+            <section id="works" class="s-works target-section">
+
+
+                <div class="row works-portfolio">
+                {%block blogs%}
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Recent Works
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Here are some of my projects. Feel free to check them out.
+                        </p>
+
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                            {%for i in object_list%}
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
+                                    <div class="folio-list__item-pic">
+                                        <img src="{{i.image}}"
+                                             srcset="{{i.image}} 1x, {{i.image}} 2x"  alt="">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Website{{i.image}}
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            {{i.title}}
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="{{i.link}}" title="project link">
+
+                                </a>
+                            </li> <!--end folio-list__item -->
+                              {%endfor%}
+
+
+                        </ul> <!-- end folio-list -->
+
+                    </div> <!-- end column -->
+                    <!-- Modal Templates Popup
+                    -------------------------------------------- -->
+                    {%for i in object_list%}
+                    <div id="modal-0{{ forloop.counter }}" hidden>
+                        <div class="modal-popup">
+                            <img src="{{i.image}}" alt="">
+                
+                            <div class="modal-popup__desc">
+                                <h5>{{ i.title }}</h5>
+                                <p>{{ i.description }}</p>
+
+                            </div>
+                
+                            <a href="{{i.link}}" class="modal-popup__details">Project link</a>
+                        </div>
+                    </div> <!-- end modal -->
+                  {%endfor%}
+
+                    {% endblock %}
+                </div> <!-- end works-portfolio -->
+
+        <!-- rewiews -->
+<!--                <div class="row testimonials">-->
+<!--                    <div class="column lg-12" data-animate-block>-->
+<!--        -->
+<!--                        <div class="swiper-container testimonial-slider" data-animate-el>-->
+<!--        -->
+<!--                            <div class="swiper-wrapper">-->
+
+<!--                                <div class="testimonial-slider__slide swiper-slide">-->
+<!--                                    <div class="testimonial-slider__author">-->
+<!--                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+<!--                                        <cite class="testimonial-slider__cite">-->
+<!--                                            <strong>Tim Cook</strong>-->
+<!--                                            <span>CEO, Apple</span>-->
+<!--                                        </cite>-->
+<!--                                    </div>-->
+<!--                                    <p>-->
+<!--                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. -->
+<!--                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.-->
+<!--                                    Laudantium quia consequatur molestias delectus culpa.-->
+<!--                                    </p>-->
+<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
+<!--                -->
+<!--                                <div class="testimonial-slider__slide swiper-slide">-->
+<!--                                    <div class="testimonial-slider__author">-->
+<!--                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+<!--                                        <cite class="testimonial-slider__cite">-->
+<!--                                            <strong>Sundar Pichai</strong>-->
+<!--                                            <span>CEO, Google</span>-->
+<!--                                        </cite>-->
+<!--                                    </div>-->
+<!--                                    <p>-->
+<!--                                    Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.-->
+<!--                                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.-->
+<!--                                    Quasi voluptas eius distinctio. Atque eos maxime.-->
+<!--                                    </p>-->
+<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
+<!--                -->
+<!--                                <div class="testimonial-slider__slide swiper-slide">-->
+<!--                                    <div class="testimonial-slider__author">-->
+<!--                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+<!--                                        <cite class="testimonial-slider__cite">-->
+<!--                                            <strong>Satya Nadella</strong>-->
+<!--                                            <span>CEO, Microsoft</span>-->
+<!--                                        </cite>-->
+<!--                                    </div>-->
+<!--                                    <p>-->
+<!--                                    Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  -->
+<!--                                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.-->
+<!--                                    Voluptatem dignissimos ut.-->
+<!--                                    </p>-->
+<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
+<!--        -->
+<!--                                <div class="testimonial-slider__slide swiper-slide">-->
+<!--                                    <div class="testimonial-slider__author">-->
+<!--                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">-->
+<!--                                        <cite class="testimonial-slider__cite">-->
+<!--                                            <strong>Jeff Bezos</strong>-->
+<!--                                            <span>CEO, Amazon</span>-->
+<!--                                        </cite>-->
+<!--                                    </div>-->
+<!--                                    <p>-->
+<!--                                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis -->
+<!--                                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. -->
+<!--                                    Nihil ea quia nesciunt. Ducimus aut sed ipsam.-->
+<!--                                    </p>-->
+<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
+<!--            -->
+<!--                            </div> &lt;!&ndash; end swiper-wrapper &ndash;&gt;-->
+<!--        -->
+<!--                            <div class="swiper-pagination"></div>-->
+<!--        -->
+<!--                        </div> &lt;!&ndash; end swiper-container &ndash;&gt;-->
+<!--        -->
+<!--                    </div> &lt;!&ndash; end column &ndash;&gt;-->
+<!--                </div> &lt;!&ndash; end row testimonials &ndash;&gt;-->
+
+            </section> <!-- end s-works -->
+
+{% block footer %}
+            <!-- ### contact
+            ================================================== -->
+            <section id="contact" class="s-contact target-section">
+
+                <div class="row contact-top">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">
+                            Get In Touch
+                        </h2>
+
+                        <p class="h1">
+                            I love to hear from you.
+                            Whether you have a question or just 
+                            want to chat.
+                        </p>
+                    </div>
+                </div> <!-- end contact-top -->
+
+                <div class="row contact-bottom">
+                    <div class="column lg-13 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Reach me at</h3>
+                        <p class="contact-links">
+                            <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui">danya.tkachenko.1997@gmail.com</a> <br>
+                            <a href="tel:+1975432345">+380968372100</a>
+                        </p>
+                    </div>
+                    <div class="column lg-4 md- tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Social</h3>
+                        <ul class="contact-social">
+                            <li><a href="#0">Linkdl</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#0">Github</a></li>
+                        </ul>
+                    </div>
+                    <div class="column lg-4 md-12 contact-block">
+                        <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                    </div>
+                </div> <!-- end contact-bottom -->
+
+            </section> <!-- end contact -->
+
+        </main> <!-- end s-content -->
+
+
+        <!-- ## footer
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column ss-copyright">
+                    <span>©2023</span>
+                </div>
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end -s-pagewrap -->
+
+{%endblock%}
+    <!-- Java Script
+    ================================================== -->
+    <script src="{%static 'js/plugins.js'%}"></script>
+    <script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>
