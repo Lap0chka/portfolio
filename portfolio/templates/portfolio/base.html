@@ -7,7 +7,10 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
+
     <title>{%block title%}Welcome{%endblock%}</title>
+
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -20,6 +23,7 @@
 
     <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
     <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}"  />
 
     <!-- favicons
     ================================================== -->
@@ -46,7 +50,7 @@
     <div class="s-pagewrap">
 
 
-        <!-- ## site header 
+        <!-- ## site header
         ================================================== -->
         <header class="s-header">
 
@@ -81,68 +85,58 @@
             ================================================== -->
             <section id="intro" class="s-intro target-section">
 
-                <div class="row intro-content wide">
+                <div class="row contact-top">
+                    <div class="column lg-7 md-10 tab-6 stack-on-650 contact-block">
+                        <h2 class="text-pretitle">
+                            I'm Backend Developer
+                        </h2>
+                        <p class="h1">
+                           Daniil Tkachenko
+                        </p>
+                         <h3 class="text-pretitle">Why me</h3>
+                          <ul class="contact-links">
+                           <li>- Expertise in Django Framework</li>
+                           <li>- Experience in developing complex systems</li>
+                           <li>- Ability to optimize and scale</li>
+                          <li>- Expertise in Python</li>
+                            <li> - Html/CSS</li>
+                            <li> - SQL/Postgresql</li>
+                              <li> - Integration and Interoperability </li>
+                               <li> - Collaborative Team Player </li>
+                               <li> - Continuous Learning and Adaptability </li>
+                               <li> - Results-oriented approach </li>
 
-                    <div class="column-center">
 
-                        <h1 class="text-huge-title">
-                            I am Daniil, <br>
-                            a backend <br> 
-                            developer  <br>
-                            in Somewhere.
-                        </h1>
-                    </div>
+                      </ul>
 
-                
+                         <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">Hire me.</a>
+                         <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">&nbsp&nbspMy CV.&nbsp</a>
 
-                </div> <!-- end intro content -->
+                     </div>
 
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
-                </a>
+                  <div class="column lg-14 md-12 about-info__pic-block">
+                        <img src="{%static 'images/about-photo.jpg'%}"
+                             srcset="{%static 'images/about-photo.jpg'%} 1x, {%static 'images/about-photo@2x.jpg'%} 2x" alt="" class="about-info__pic" >
+                    </div><!-- end contact-top -->
+
+
 
             </section> <!-- end s-intro -->
 
 
-            <!-- ### about
-            ================================================== -->
+
             <section id="about" class="s-about target-section">
+                <!-- about-info -->
 
-
-                <div class="row about-info wide" data-animate-block>
-
-                    <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="{%static 'images/about-photo.jpg'%}"
-                             srcset="{%static 'images/about-photo.jpg'%} 1x, {%static 'images/about-photo@2x.jpg'%} 2x" alt="" class="about-info__pic" data-animate-el>
-                    </div>
-
-                    <div class="column lg-6 md-12">
-                        <div class="about-info__text" >
-
-                            <h2 class="text-pretitle with-line" data-animate-el>
-                                About
-                            </h2>
-                            <p class="attention-getter" data-animate-el>
-
-Hello! My name is Daniel, I'm 25 years old, and I come from Ukraine. Currently, I am residing in Berlin and actively seeking a position as a Django developer. My skill set includes a profound understanding of the Django framework, experience in building web applications using Python, as well as knowledge of databases and working with ORM. My goal is to apply my knowledge and skills to create efficient and innovative web projects.
-                                I believe that quality development requires not only technical expertise but also the ability to communicate effectively within a team. My communicative nature and teamwork skills will assist me in collaborating with colleagues and clients to produce products that meet high standards.
-                                I appreciate your interest in exploring potential collaboration opportunities. Thank you for taking the time to consider my background and skills. If you have any questions or would like to discuss further, please feel free to reach me. I'm looking forward to the possibility of working together.
-                            </p>
-                            <a href="{% static 'cv.pdf' %}" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
-
-                        </div>
-                    </div>
-                </div> <!-- about-info -->
 
 
                 <div class="row about-expertise" data-animate-block>
                     <div class="column lg-12">
 
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
+                        <h2 class="text-pretitle" data-animate-el>about</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Python developer</li>
-                            <li>Django developer</li>
+                            <li>Knowledge</li>
                         </ul>
 
                     </div>
@@ -178,8 +172,8 @@ Working as an assistant to a system administrator afforded me valuable experienc
                                     </p>
                                 </div>
                             </div>
-    
-    
+
+
                         </div> <!-- end timeline -->
 
                     </div> <!-- end column -->
@@ -203,7 +197,7 @@ Working as an assistant to a system administrator afforded me valuable experienc
                                     <p>Cybersecurity is a set of tools, strategies, security principles, security assurances, risk management approaches, actions, training, insurance and technologies used to protect cyber media, resources of organizations and users. Cybersecurity provides for the achievement and conservation of security features of the resources of the organization or users directed against the corresponding cyber threats.</p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
@@ -216,9 +210,9 @@ Working as an assistant to a system administrator afforded me valuable experienc
                                     <p>I studied at Romensky College of Kyiv National Economic University (KNEU) for 4 years, specializing in System Administration. During my time there, I gained in-depth knowledge and skills in managing and maintaining information systems, configuring servers, handling network devices, ensuring system security, and providing technical support to users. This comprehensive education has equipped me with the expertise needed to excel in the field of System Administration.</p>
                                 </div>
                             </div>
-    
+
                         </div> <!-- end timeline -->
-                        
+
                     </div> <!-- end column -->
 
 
@@ -252,7 +246,7 @@ Working as an assistant to a system administrator afforded me valuable experienc
                                         <img src="{{i.image}}"
                                              srcset="{{i.image}} 1x, {{i.image}} 2x"  alt="">
                                     </div>
-                                    
+
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
                                             Website{{i.image}}
@@ -278,13 +272,13 @@ Working as an assistant to a system administrator afforded me valuable experienc
                     <div id="modal-0{{ forloop.counter }}" hidden>
                         <div class="modal-popup">
                             <img src="{{i.image}}" alt="">
-                
+
                             <div class="modal-popup__desc">
                                 <h5>{{ i.title }}</h5>
                                 <p>{{ i.description }}</p>
 
                             </div>
-                
+
                             <a href="{{i.link}}" class="modal-popup__details">Project link</a>
                         </div>
                     </div> <!-- end modal -->
@@ -385,7 +379,7 @@ Working as an assistant to a system administrator afforded me valuable experienc
 
                         <p class="h1">
                             I love to hear from you.
-                            Whether you have a question or just 
+                            Whether you have a question or just
                             want to chat.
                         </p>
                     </div>
@@ -402,8 +396,11 @@ Working as an assistant to a system administrator afforded me valuable experienc
                     <div class="column lg-4 md- tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Social</h3>
                         <ul class="contact-social">
+
                             <li><a href="https://www.linkedin.com/in/daniil-tkachenko-459b82233/">Linkdl</a></li>
                             <li><a href="https://github.com/Lap0chka">Github</a></li>
+
+
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">

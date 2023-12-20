@@ -29,6 +29,8 @@ class MyBlogListView(FormView, ListView):
     def get_queryset(self):
         filt = self.kwargs.get('old')
         return Blog.objects.filter(is_published=True) if filt == 'old' else Blog.objects.order_by('-data')
+   
+
 
 
 class DeteilView(DetailView):
