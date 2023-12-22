@@ -110,7 +110,7 @@
                       </ul>
 
                          <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">Hire me.</a>
-                         <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">&nbsp&nbspMy CV.&nbsp</a>
+                         <a href="{% static 'cv.pdf' %}" class="btn btn--medium " >&nbsp&nbspMy CV.&nbsp</a>
 
                      </div>
 
@@ -243,8 +243,8 @@ Working as an assistant to a system administrator afforded me valuable experienc
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                     <div class="folio-list__item-pic">
-                                        <img src="{{i.image}}"
-                                             srcset="{{i.image}} 1x, {{i.image}} 2x"  alt="">
+                                        <img src="{{i.image.url}}"
+                                             srcset="{{i.image.url}} 1x, {{i.image.url}} 2x"  alt="">
                                     </div>
 
                                     <div class="folio-list__item-text">
@@ -271,7 +271,7 @@ Working as an assistant to a system administrator afforded me valuable experienc
                     {%for i in object_list%}
                     <div id="modal-0{{ forloop.counter }}" hidden>
                         <div class="modal-popup">
-                            <img src="{{i.image}}" alt="">
+                            <img src="{{i.image.url}}" alt="">
 
                             <div class="modal-popup__desc">
                                 <h5>{{ i.title }}</h5>

@@ -7,6 +7,8 @@ class Blog(models.Model):
     data = models.DateTimeField(auto_now_add=True)
     picture = models.ImageField(upload_to='blog', null=True, blank=True)
     is_published = models.BooleanField(default=True)
+    views = models.PositiveIntegerField(default=0)
+
 
 class Suggest(models.Model):
     title = models.CharField(max_length=128)
