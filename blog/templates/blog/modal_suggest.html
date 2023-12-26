@@ -1,20 +1,16 @@
-<head>
-  <style>
-    .form-popup{
+<style>
+.form-popup{
     display:none;
     }
-    form input{
-    width:100%;
+ .form-popup input{
+   width:100%;
     text-align:center;
     }
-  </style>
-</head>
-<body>
+</style>
 
-<button class="open-button" onclick="openForm()">Suggest news</button>
-
+<button onclick="openForm(event)">Suggest news</button>
 <div class="form-popup" id="myForm">
-  <form action="{% url 'blog' %}" method="post">
+  <form id ='full_suggest' action="{% url 'blog' %}" method="post">
     {% csrf_token %}
     <h1>News</h1>
     <label for="title"><b>Title</b></label>
@@ -30,10 +26,48 @@
 
 <script>
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  var formPopup = document.getElementById("myForm");
+  formPopup.style.display = "block";
+
+  // Прокручиваем страницу к модальному окну
+  smoothScrollTo(formPopup);
+
+  document.body.classList.add("form-popup-open");
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  var formPopup = document.getElementById("myForm");
+  formPopup.style.display = "none";
+  document.body.classList.remove("form-popup-open");
+}
+
+function smoothScrollTo(element) {
+  const startingY = window.pageYOffset;
+  const elementY = window.pageYOffset + element.getBoundingClientRect().top;
+  const targetY = document.body.scrollHeight - window.innerHeight;
+
+  const diff = targetY - startingY;
+  const easing = easeInOutQuad;
+  let start;
+
+  if (!diff) return;
+
+  window.requestAnimationFrame(function step(timestamp) {
+    if (!start) start = timestamp;
+
+    const time = timestamp - start;
+    let percent = Math.min(time / 500, 1);
+    percent = easing(percent);
+
+    window.scrollTo(0, startingY + diff * percent);
+
+    if (time < 500) {
+      window.requestAnimationFrame(step);
+    }
+  });
+}
+
+function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 </script>

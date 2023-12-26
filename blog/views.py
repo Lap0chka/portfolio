@@ -26,7 +26,7 @@ class MyBlogListView(FormView, ListView):
             from_email = settings.DEFAULT_FROM_EMAIL
             to_email = ['danya.tkachenko.1997@gmail.com']
             send_mail(subject, message, from_email, to_email, fail_silently=False)
-            messages.success(self.request, f'Thanks for the suggestions\nI will check and add)')
+            messages.success(self.request, f"Thanks for the suggestions\nI'll check and add")
         except Exception:
             # ошибка
             messages.error(self.request, 'Something is wrong. Try again')
