@@ -1,43 +1,61 @@
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView, TemplateView, FormView
+from django.shortcuts import redirect
+from django.views.generic import ListView, DetailView
 from blog.models import Blog
-from django.urls import reverse_lazy,reverse
-from blog.form import FormSuggest
-from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from .form import FormSuggest
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
+from django.db import models
 
-class Test(TemplateView):
-    template_name = 'blog/test.html'
 
-class MyBlogListView(FormView, ListView):
+class MyBlogListView(ListView):
     template_name = 'blog/base.html'
     paginate_by = 6
     model = Blog
-    form_class = FormSuggest
     success_url = reverse_lazy('blog')
-
-    def form_valid(self, form):
-        try:
-            form.save()
-            subject = 'Новое предложения'
-            message = f'Кто то отправил мне предложения.'
-            from_email = settings.DEFAULT_FROM_EMAIL
-            to_email = ['danya.tkachenko.1997@gmail.com']
-            send_mail(subject, message, from_email, to_email, fail_silently=False)
-            messages.success(self.request, f"Thanks for the suggestions\nI'll check and add")
-        except Exception:
-            # ошибка
-            messages.error(self.request, 'Something is wrong. Try again')
-        return HttpResponseRedirect(self.get_success_url())
+    form_class = FormSuggest
 
     def get_queryset(self):
-        filt = self.kwargs.get('old')
-        return Blog.objects.filter(is_published=True) if filt == 'old' else Blog.objects.order_by('-data')
-   
+        self.ordering = self.kwargs.get('ordering', '-data')
+        if self.ordering not in ['data', '-data', 'views', '-views']:
+            self.ordering = '-data'
+        return Blog.objects.order_by(self.ordering)
 
 
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = self.form_class()  # Создайте экземпляр формы
+        context['current_ordering'] = self.ordering
+        print(context['current_ordering'])
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        link = request.POST.get('link')
+        message_error = f'Something is wrong. Try again\n'
+        print(form)
+        if form.is_valid():
+            try:
+                form.save()
+                subject = 'Новое предложение'
+                message = f'Кто-то отправил мне предложение.\n' \
+                          f'Тема: {form.cleaned_data["title"]}\n' \
+                          f'Описание: {form.cleaned_data["description"]}\n' \
+                          f'Ссылка: {form.cleaned_data["link"]}'
+                from_email = settings.DEFAULT_FROM_EMAIL
+                to_email = ['danya.tkachenko.1997@gmail.com']
+                send_mail(subject, message, from_email, to_email, fail_silently=False)
+                messages.success(self.request, f"Thanks for the suggestion\nI'll check and add")
+            except Exception:
+                messages.error(self.request, message_error)
+            return super().get(request, *args, **kwargs)
+        else:
+            if not isinstance(link, models.URLField):
+                message_error += f'\nURL field {link} is not url'
+            messages.error(self.request, message_error)
+            return redirect('blog')
 
 class DeteilView(DetailView):
     model = Blog

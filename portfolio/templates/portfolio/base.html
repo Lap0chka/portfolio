@@ -110,7 +110,7 @@
                       </ul>
 
                          <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">Hire me.</a>
-                         <a href="{% static 'cv.pdf' %}" class="btn btn--medium " >&nbsp&nbspMy CV.&nbsp</a>
+                         <a href="{% static 'СV_Daniil_Tkachenko_Django_Python.pdf' %}" class="btn btn--medium " >&nbsp&nbspMy CV.&nbsp</a>
 
                      </div>
 
@@ -157,19 +157,12 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h3 class="timeline__title">СС Kharkov</h3>
-                                    <h5 class="timeline__meta">Junior System Administrator</h5>
-                                    <p class="timeline__timeframe">August 2021 - January 2022</p>
+                                    <h5 class="timeline__meta">Junior Backend Developer</h5>
+                                    <p class="timeline__timeframe">August 2020 - January 2022</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        For a year, I worked as an assistant to a system administrator, actively contributing to maintaining a stable and efficient IT infrastructure. My responsibilities encompassed supporting and maintaining servers, configuring network devices, and addressing day-to-day technical issues faced by users.
-
-During my tenure, I successfully executed routine tasks such as software installations and updates, monitoring system resources, and performing data backups. Furthermore, I collaborated closely with more experienced colleagues, learning from them and applying gained knowledge in practical scenarios.
-
-My role also involved training users in the basics of IT systems, providing assistance with technical inquiries, and troubleshooting malfunctions. This experience enhanced my communication skills and my ability to find effective solutions in resource-constrained situations.
-
-Working as an assistant to a system administrator afforded me valuable experience in IT system management, equipping me to adeptly handle technical challenges within a dynamic environment.
-                                    </p>
+                                        For a year, I worked as a backend developer, creating websites using Django, and utilizing Celery and Redis for task management and caching. My responsibilities included developing and integrating APIs, connecting and managing databases, and ensuring efficient and robust web application performance.</p>
                                 </div>
                             </div>
 
@@ -243,8 +236,8 @@ Working as an assistant to a system administrator afforded me valuable experienc
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                     <div class="folio-list__item-pic">
-                                        <img src="{{i.image.url}}"
-                                             srcset="{{i.image.url}} 1x, {{i.image.url}} 2x"  alt="">
+                                        <img src="{% get_media_prefix %}media/{{i.image.url}}"
+                                             srcset="{% get_media_prefix %}media/{{i.image.url}} 1x, {% get_media_prefix %}media/{{i.image.url}} 2x"  alt="">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -270,15 +263,16 @@ Working as an assistant to a system administrator afforded me valuable experienc
                     {%for i in object_list%}
                     <div id="modal-0{{ forloop.counter }}" hidden>
                         <div class="modal-popup">
-                            <img src="{{i.image.url}}" alt="">
+                            <img src="{% get_media_prefix %}media/{{i.image.url}}" alt="">
 
                             <div class="modal-popup__desc">
                                 <h5>{{ i.title }}</h5>
-                                <p>{{ i.description }}</p>
+                                <p>{{ i.description|linebreaks }}</p>
 
                             </div>
-
-                            <a href="{{i.link}}" class="modal-popup__details">Project link</a>
+                            {% if i.is_link%}
+                                <a href="{{i.link}}" class="modal-popup__details">Project link</a>
+                            {%endif%}
                         </div>
                     </div> <!-- end modal -->
                   {%endfor%}

@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-(8nlmf4!-q%7jinq++1#v*698$c3(l=h5_bakk&@x2!k9rn--d
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -135,6 +135,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'danya.tkachenko.1997@gmail.com'
-EMAIL_HOST_PASSWORD = 'pjbs bdtc srfj ofjd'
+EMAIL_HOST_PASSWORD = 'jjop bwvy tequ cjea'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

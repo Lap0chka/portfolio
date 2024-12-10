@@ -9,7 +9,7 @@ class FormSuggest(forms.ModelForm):
     description = forms.CharField(max_length=256, widget=forms.TextInput(attrs={
         'placeholder': "Enter Description",
     }))
-    link = forms.URLField(max_length=256, required=False, widget=forms.TextInput(attrs={
+    link = forms.CharField(max_length=256, required=False, widget=forms.TextInput(attrs={
         'placeholder': "Enter url",
     }))
     class Meta:

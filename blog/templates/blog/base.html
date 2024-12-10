@@ -2,16 +2,16 @@
 
 {%load static%}
 {%block title%}My_blog{%endblock%}
-<style>
-
-</style>
-
 
 {%block menu%}
-    <li><a href="{% url 'portfolio' %}" style="color: orange;">Intro</a></li>
-    <li><a href="{%url 'categori' 'new'%}" >New</a></li>
-    <li><a href="{%url 'categori' 'old'%}" >Old</a></li>
-    <li><a href="#contact" class="smoothscroll">Suggest news</a></li>
+    <li><a href="{% url 'portfolio' %}" style="color: orange;font-size: 13px; font-weight: bold;">Intro</a></li>
+    <li {% if current_ordering == '-data' %}style="display: none;"{% endif %}><a href="{% url 'ordering' '-data' %}" >By date (newest)</a></li>
+<li {% if current_ordering == '-data' %}style="display: relative;"{%else%}style="display: none;{% endif %}><a href="{% url 'ordering' 'data' %}" >By date (oldest)</a></li>
+<li {% if current_ordering == '-views' %}style="display: none;"{% endif %}><a href="{% url 'ordering' '-views' %}" >By views (highest)</a></li>
+<li {% if current_ordering == '-views' %}style="display: relative;"{%else%}style="display: none;{% endif %}><a href="{% url 'ordering' 'views' %}" >By views (lowest)</a></li>
+
+
+    <li><a href="#contact" style="font-size: 13px; font-weight: bold;" class="smoothscroll">Suggest news</a></li>
 {%endblock%}
 
 {%block context%}
@@ -40,7 +40,7 @@
                                     <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                         <div class="folio-list__item-pic">
                                             <img src="{%static 'images/news.png'%}"
-                                                 srcset="{%static 'images/news.png'%} 1x, {%if i.picture%} {{i.picture.url}} 2x {%else%} {%static 'images/news.png'%} 2x {%endif%}"  alt="">
+                                                 srcset="{%static 'images/news.png'%} 1x, {%if i.picture%} {% get_media_prefix %}media/{{i.picture.url}} 2x {%else%} {%static 'images/news.png'%} 2x {%endif%}"  alt="">
                                         </div>
 
                                         <div class="folio-list__item-text">
