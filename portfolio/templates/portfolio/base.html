@@ -1,5 +1,5 @@
 {%load static%}
-
+{% load i18n %}
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="en">
 <head>
@@ -8,7 +8,7 @@
     ================================================== -->
     <meta charset="utf-8">
 
-    <title>{%block title%}Welcome{%endblock%}</title>
+    <title>{%block title%}{% trans "Welcome" %}{%endblock%}</title>
 
 
     <meta name="description" content="">
@@ -20,22 +20,12 @@
 
     <!-- CSS
     ================================================== -->
-
     <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
     <link rel="stylesheet" href="{%static 'css/styles.css'%}">
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}"  />
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
 </head>
 
 <body id="top">
-
 
     <!-- # preloader
     ================================================== -->
@@ -55,19 +45,29 @@
         <header class="s-header">
 
             <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Hello</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+                <span class="mobile-home-link"><a href="index.html">{% trans "Hello" %}</a></span>
+                <a class="mobile-menu-toggle" href="#"><span>{% trans "Menu" %}</span></a>
             </div>
-
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
                         {%block menu%}
-                            <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                            <li><a href="#about" class="smoothscroll">About</a></li>
-                            <li><a href="#works" class="smoothscroll">Works</a></li>
-                            <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
-                            <li><a href="{% url 'blog' %}" style="color: orange;" class="">Blog</a></li>
+
+                        <li class="current">
+                            <a href="#intro" class="smoothscroll">{% trans "Intro" %}</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="smoothscroll">{% trans "About" %}</a>
+                        </li>
+                        <li>
+                            <a href="#works" class="smoothscroll">{% trans "Works" %}</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="smoothscroll">{% trans "Say Hello" %}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'blog' %}" style="color: orange;" class="">{% trans "Blog" %}</a>
+                        </li>
                         {%endblock%}
                     </ul>
                 </nav>
@@ -88,30 +88,34 @@
                 <div class="row contact-top">
                     <div class="column lg-7 md-10 tab-6 stack-on-650 contact-block">
                         <h2 class="text-pretitle">
-                            I'm Backend Developer
+                            {% trans "I'm Backend Developer" %}
                         </h2>
                         <p class="h1">
-                           Daniil Tkachenko
+                            {% trans "Daniil Tkachenko" %}
                         </p>
-                         <h3 class="text-pretitle">Why me</h3>
+                        <h3 class="text-pretitle">{% trans "Why me" %}</h3>
                           <ul class="contact-links">
-                           <li>- Expertise in Django Framework</li>
-                           <li>- Experience in developing complex systems</li>
-                           <li>- Ability to optimize and scale</li>
-                          <li>- Expertise in Python</li>
-                            <li> - Html/CSS</li>
-                            <li> - SQL/Postgresql</li>
-                              <li> - Integration and Interoperability </li>
-                               <li> - Collaborative Team Player </li>
-                               <li> - Continuous Learning and Adaptability </li>
-                               <li> - Results-oriented approach </li>
+                              <li>{% trans "Expertise in Django Framework" %}</li>
+                              <li>{% trans "Experience in developing complex systems" %}</li>
+                              <li>{% trans "Ability to optimize and scale" %}</li>
+                              <li>{% trans "Expertise in Python" %}</li>
+                              <li>Django Rest Framework</li>
+                              <li>HTML/CSS</li>
+                              <li>SQL/PostgreSQL</li>
+                              <li>Celery/Redis</li>
+                              <li>{% trans "Integration and Interoperability" %}</li>
+                              <li>{% trans "Collaborative Team Player" %}</li>
+                              <li>{% trans "Continuous Learning and Adaptability" %}</li>
+                              <li>{% trans "Results-oriented approach" %}</li>
+                          </ul>
 
+                        <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">
+                            {% trans "Hire me" %}
+                        </a>
 
-                      </ul>
-
-                         <a  href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium contact-btn">Hire me.</a>
-                         <a href="{% static 'СV_Daniil_Tkachenko_Django_Python.pdf' %}" class="btn btn--medium " >&nbsp&nbspMy CV.&nbsp</a>
-
+                        <a href="{% static 'СV_Daniil_Tkachenko_Django_Python.pdf' %}" class="btn btn--medium">
+                            &nbsp;&nbsp;{% trans "My CV" %}&nbsp;
+                        </a>
                      </div>
 
                   <div class="column lg-14 md-12 about-info__pic-block">
@@ -120,7 +124,7 @@
                     </div><!-- end contact-top -->
 
 
-
+                </div>
             </section> <!-- end s-intro -->
 
 
@@ -128,15 +132,13 @@
             <section id="about" class="s-about target-section">
                 <!-- about-info -->
 
-
-
                 <div class="row about-expertise" data-animate-block>
                     <div class="column lg-12">
 
-                        <h2 class="text-pretitle" data-animate-el>about</h2>
+                        <h2 class="text-pretitle" data-animate-el>{% trans "about" %}</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Knowledge</li>
+                            <li>{% trans "Knowledge" %}</li>
                         </ul>
 
                     </div>
@@ -148,7 +150,7 @@
                     <div class="column lg-6 tab-12">
 
                         <h2 class="text-pretitle" data-animate-el>
-                            Experience
+                            {% trans "Experience" %}
                         </h2>
 
                         <div class="timeline" data-animate-el>
@@ -156,38 +158,59 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h3 class="timeline__title">СС Kharkov</h3>
+                                    <h3 class="timeline__title">СС Kharkiv</h3>
                                     <h5 class="timeline__meta">Junior Backend Developer</h5>
-                                    <p class="timeline__timeframe">August 2020 - January 2022</p>
+                                    <p class="timeline__timeframe">
+                                        {% trans "August 2020 - January 2022" %}
+                                    </p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>
-                                        For a year, I worked as a backend developer, creating websites using Django, and utilizing Celery and Redis for task management and caching. My responsibilities included developing and integrating APIs, connecting and managing databases, and ensuring efficient and robust web application performance.</p>
+                                    <p>
+                                        {% blocktrans %}
+                                        For a year, I worked as a backend developer, creating websites using Django, and
+                                        utilizing Celery and Redis for task management and caching. My responsibilities
+                                        included developing and integrating APIs, connecting and managing databases, and
+                                        ensuring efficient and robust web application performance.
+                                        {% endblocktrans %}
+                                    </p>
                                 </div>
                             </div>
-
 
                         </div> <!-- end timeline -->
 
                     </div> <!-- end column -->
 
                     <div class="column lg-6 tab-12">
-
                         <h2 class="text-pretitle" data-animate-el>
-                            Education
+                            {% trans "Education" %}
                         </h2>
 
                         <div class="timeline" data-animate-el>
-
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h3 class="timeline__title">KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS</h3>
-                                    <h5 class="timeline__meta">CyberSecuarity</h5>
-                                    <p class="timeline__timeframe">April 2016 - June 2020</p>
+                                    <h3 class="timeline__title">
+                                        {% trans "KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS" %}
+                                    </h3>
+                                    <h5 class="timeline__meta">
+                                        {% trans "CyberSecurity" %}
+                                    </h5>
+                                    <p class="timeline__timeframe">
+                                        {% trans "April 2016 - June 2020" %}
+                                    </p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Cybersecurity is a set of tools, strategies, security principles, security assurances, risk management approaches, actions, training, insurance and technologies used to protect cyber media, resources of organizations and users. Cybersecurity provides for the achievement and conservation of security features of the resources of the organization or users directed against the corresponding cyber threats.</p>
+                                    <p>
+                                        {% blocktrans %}
+                                        Cybersecurity is a set of tools, strategies, security principles, security
+                                        assurances, risk management approaches, actions, training, insurance and
+                                        technologies used to protect cyber media, resources of organizations and users.
+                                        Cybersecurity provides for the achievement and conservation of security features
+                                        of the resources of the organization or users directed against the corresponding
+                                        cyber threats.
+                                        {% endblocktrans %}
+                                    </p>
                                 </div>
                             </div>
 
@@ -195,20 +218,30 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">
-                                        Kyiv National Economic University Romny college</h4>
-                                    <h5 class="timeline__meta">System Administrator</h5>
-                                    <p class="timeline__timeframe">August 2012 - June 2016</p>
+                                        {% trans "Kyiv National Economic University Romny college" %}
+                                    </h4>
+                                    <h5 class="timeline__meta">
+                                        {% trans "System Administrator" %}
+                                    </h5>
+                                    <p class="timeline__timeframe">
+                                        {% trans "August 2012 - June 2016" %}
+                                    </p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>I studied at Romensky College of Kyiv National Economic University (KNEU) for 4 years, specializing in System Administration. During my time there, I gained in-depth knowledge and skills in managing and maintaining information systems, configuring servers, handling network devices, ensuring system security, and providing technical support to users. This comprehensive education has equipped me with the expertise needed to excel in the field of System Administration.</p>
+                                    <p>
+                                        {% blocktrans %}
+                                        I studied at Romensky College of Kyiv National Economic University (KNEU) for 4
+                                        years, specializing in System Administration. During my time there, I gained
+                                        in-depth knowledge and skills in managing and maintaining information systems,
+                                        configuring servers, handling network devices, ensuring system security, and
+                                        providing technical support to users. This comprehensive education has equipped
+                                        me with the expertise needed to excel in the field of System Administration.
+                                        {% endblocktrans %}
+                                    </p>
                                 </div>
                             </div>
-
-                        </div> <!-- end timeline -->
-
-                    </div> <!-- end column -->
-
-
+                        </div>
+                    </div>
                 </div> <!-- end about-timelines -->
 
             </section> <!-- end s-about -->
@@ -217,38 +250,36 @@
             <!-- ### works
             ================================================== -->
             <section id="works" class="s-works target-section">
-
-
                 <div class="row works-portfolio">
                 {%block blogs%}
-
                     <div class="column lg-12" data-animate-block>
-
                         <h2 class="text-pretitle" data-animate-el>
-                            Recent Works
+                            {% trans "Recent Works" %}
+
                         </h2>
                         <p class="h1" data-animate-el>
-                            Here are some of my projects. Feel free to check them out.
-                        </p>
+                            {% trans "Here are some of my projects. Feel free to check them out." %}
 
+                        </p>
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                            {%for i in object_list%}
+                            {%for project in object_list%}
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                     <div class="folio-list__item-pic">
-                                        <img src="{% get_media_prefix %}media/{{i.image.url}}"
-                                             srcset="{% get_media_prefix %}media/{{i.image.url}} 1x, {% get_media_prefix %}media/{{i.image.url}} 2x"  alt="">
+                                        <img src="{% get_media_prefix %}media/{{project.image.url}}"
+                                             srcset="{% get_media_prefix %}media/{{project.image.url}} 1x, {% get_media_prefix %}media/{{project.image.url}} 2x"
+                                             alt="">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            {{i.is_it}}
+                                            {{project.is_it}}
                                         </div>
                                         <div class="folio-list__item-title">
-                                            {{i.title}}
+                                            {{project.title}}
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="{{i.link}}" title="project link">
+                                <a class="folio-list__proj-link" href="{{project.link}}" title="project link">
 
                                 </a>
                             </li> <!--end folio-list__item -->
@@ -260,127 +291,52 @@
                     </div> <!-- end column -->
                     <!-- Modal Templates Popup
                     -------------------------------------------- -->
-                    {%for i in object_list%}
+                    {%for project in object_list%}
                     <div id="modal-0{{ forloop.counter }}" hidden>
                         <div class="modal-popup">
-                            <img src="{% get_media_prefix %}media/{{i.image.url}}" alt="">
+                            <img src="{% get_media_prefix %}media/{{project.image.url}}" alt="">
 
                             <div class="modal-popup__desc">
-                                <h5>{{ i.title }}</h5>
-                                <p>{{ i.description|linebreaks }}</p>
+                                <h5>{{ project.title }}</h5>
+                                <p>{% trans "What I used: " %} {{ project.description|linebreaks }}</p>
 
                             </div>
-                            {% if i.is_link%}
-                                <a href="{{i.link}}" class="modal-popup__details">Project link</a>
+                            {% if project.is_link%}
+                            <a href="{{project.link}}" class="modal-popup__details">Project link</a>
                             {%endif%}
                         </div>
-                    </div> <!-- end modal -->
+                    </div>
                   {%endfor%}
 
                     {% endblock %}
-                </div> <!-- end works-portfolio -->
+                </div>
+            </section>
 
-        <!-- rewiews -->
-<!--                <div class="row testimonials">-->
-<!--                    <div class="column lg-12" data-animate-block>-->
-<!--        -->
-<!--                        <div class="swiper-container testimonial-slider" data-animate-el>-->
-<!--        -->
-<!--                            <div class="swiper-wrapper">-->
-
-<!--                                <div class="testimonial-slider__slide swiper-slide">-->
-<!--                                    <div class="testimonial-slider__author">-->
-<!--                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">-->
-<!--                                        <cite class="testimonial-slider__cite">-->
-<!--                                            <strong>Tim Cook</strong>-->
-<!--                                            <span>CEO, Apple</span>-->
-<!--                                        </cite>-->
-<!--                                    </div>-->
-<!--                                    <p>-->
-<!--                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. -->
-<!--                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.-->
-<!--                                    Laudantium quia consequatur molestias delectus culpa.-->
-<!--                                    </p>-->
-<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
-<!--                -->
-<!--                                <div class="testimonial-slider__slide swiper-slide">-->
-<!--                                    <div class="testimonial-slider__author">-->
-<!--                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">-->
-<!--                                        <cite class="testimonial-slider__cite">-->
-<!--                                            <strong>Sundar Pichai</strong>-->
-<!--                                            <span>CEO, Google</span>-->
-<!--                                        </cite>-->
-<!--                                    </div>-->
-<!--                                    <p>-->
-<!--                                    Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.-->
-<!--                                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.-->
-<!--                                    Quasi voluptas eius distinctio. Atque eos maxime.-->
-<!--                                    </p>-->
-<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
-<!--                -->
-<!--                                <div class="testimonial-slider__slide swiper-slide">-->
-<!--                                    <div class="testimonial-slider__author">-->
-<!--                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">-->
-<!--                                        <cite class="testimonial-slider__cite">-->
-<!--                                            <strong>Satya Nadella</strong>-->
-<!--                                            <span>CEO, Microsoft</span>-->
-<!--                                        </cite>-->
-<!--                                    </div>-->
-<!--                                    <p>-->
-<!--                                    Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  -->
-<!--                                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.-->
-<!--                                    Voluptatem dignissimos ut.-->
-<!--                                    </p>-->
-<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
-<!--        -->
-<!--                                <div class="testimonial-slider__slide swiper-slide">-->
-<!--                                    <div class="testimonial-slider__author">-->
-<!--                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">-->
-<!--                                        <cite class="testimonial-slider__cite">-->
-<!--                                            <strong>Jeff Bezos</strong>-->
-<!--                                            <span>CEO, Amazon</span>-->
-<!--                                        </cite>-->
-<!--                                    </div>-->
-<!--                                    <p>-->
-<!--                                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis -->
-<!--                                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. -->
-<!--                                    Nihil ea quia nesciunt. Ducimus aut sed ipsam.-->
-<!--                                    </p>-->
-<!--                                </div> &lt;!&ndash; end testimonial-slider__slide &ndash;&gt;-->
-<!--            -->
-<!--                            </div> &lt;!&ndash; end swiper-wrapper &ndash;&gt;-->
-<!--        -->
-<!--                            <div class="swiper-pagination"></div>-->
-<!--        -->
-<!--                        </div> &lt;!&ndash; end swiper-container &ndash;&gt;-->
-<!--        -->
-<!--                    </div> &lt;!&ndash; end column &ndash;&gt;-->
-<!--                </div> &lt;!&ndash; end row testimonials &ndash;&gt;-->
-
-            </section> <!-- end s-works -->
-
-{% block footer %}
+            {% block footer %}
             <!-- ### contact
             ================================================== -->
+
             <section id="contact" class="s-contact target-section">
 
                 <div class="row contact-top">
                     <div class="column lg-12">
                         <h2 class="text-pretitle">
-                            Get In Touch
+                            {% trans "Get In Touch" %}
                         </h2>
 
                         <p class="h1">
-                            I love to hear from you.
-                            Whether you have a question or just
-                            want to chat.
+                            {% blocktrans %}
+                            If you need a website or want to hire me, feel free to reach out!
+                            {% endblocktrans %}
                         </p>
                     </div>
-                </div> <!-- end contact-top -->
+                </div>
 
                 <div class="row contact-bottom">
                     <div class="column lg-13 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Reach me at</h3>
+                        <h3 class="text-pretitle">
+                            {% trans "Reach me at" %}
+                        </h3>
                         <p class="contact-links">
                             <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui">danya.tkachenko.1997@gmail.com</a> <br>
                             <a href="tel:+1975432345">+380968372100</a>
@@ -390,14 +346,28 @@
                         <h3 class="text-pretitle">Social</h3>
                         <ul class="contact-social">
 
-                            <li><a href="https://www.linkedin.com/in/daniil-tkachenko-459b82233/">Linkdl</a></li>
-                            <li><a href="https://github.com/Lap0chka">Github</a></li>
-
-
+                            <li><a href="https://www.linkedin.com/in/daniil-tkachenko-459b82233/">Linkedin</a></li>
+                            <li><a href="https://github.com/Lap0chka">GitHub</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                        <a href="mailto:danya.tkachenko.1997@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello</a>
+                    </div>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    <div class="column lg-6 md- tab-6 stack-on-550 contact-block">
+                        <p class="text-pretitle">{% trans "Site Language" %}</p>
+                        <ul class="contact-social">
+                            {% for language in languages %}
+                            <li>
+                                <a href="/{{ language.code }}/"
+                                   {% if language.code == LANGUAGE_CODE %} class="selected" {% endif %}>
+                                    {{ language.name_translated }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div> <!-- end contact-bottom -->
 
@@ -405,13 +375,12 @@
 
         </main> <!-- end s-content -->
 
-
         <!-- ## footer
         ================================================== -->
         <footer class="s-footer">
             <div class="row">
                 <div class="column ss-copyright">
-                    <span>©2023</span>
+                    <span>©2025 Tkachenko Daniil</span>
                 </div>
                 <div class="ss-go-top">
                     <a class="smoothscroll" title="Back to Top" href="#top">

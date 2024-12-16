@@ -1,0 +1,122 @@
+{%extends 'portfolio/base.html'%}
+
+{%load static%}
+{%block title%}My_blog{%endblock%}
+
+{%block menu%}
+    <li><a href="{% url 'portfolio' %}" style="color: orange;font-size: 13px; font-weight: bold;">Intro</a></li>
+    <li><a href="#contact" style="font-size: 13px; font-weight: bold;" class="smoothscroll">Suggest news</a></li>
+{%endblock%}
+
+{%block context%}
+
+{%endblock%}
+
+{%block blogs%}
+{% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+            <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Articles
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Sometimes I will add interesting information here.
+                        </p>
+
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                            {%for post in posts%}
+                                <li class="folio-list__item column" data-animate-el>
+                                    <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
+                                        <div class="folio-list__item-pic">
+                                            <img src="{{post.picture.url}}"
+                                                 srcset="{% get_media_prefix %}media/{{post.picture.url}} 2x"  alt="">
+                                        </div>
+
+                                        <div class="folio-list__item-text">
+                                            <div class="folio-list__item-title">
+                                                {{post.title}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="folio-list__proj-link" href="{{post.link}}" title="project link">
+
+                                    </a>
+                                </li> <!--end folio-list__item -->
+
+                                  {%endfor%}
+
+
+                            </ul> <!-- end folio-list -->
+                      {% if is_paginated %}
+                 <div class="pagination" style="text-align:center">
+                     <a class="page-link" {%if page_obj.has_previous%} style="color:white;" href=" {% url 'paginator' page_obj.previous_page_number %}{% else %}#{%endif%}" tabindex="-1" aria-disabled="true">«</a>
+                            {% for page in page_obj.paginator.page_range%}
+                                <a class="page-link" {%if page_obj.number != page%} style="color:white;"{%else%}style="background-color: #b9b9b9; {%endif%}href="{%url 'paginator' page %}">{{page}}</a>
+                            {%endfor%}
+                     <a class="page-link" {%if page_obj.has_next%} style="color:white;" href=" {% url 'paginator' page_obj.next_page_number %}{% else %}#{%endif%}">»</a>
+                        </ul>
+                </div>
+            {%endif%}
+                        </div> <!-- end column -->
+                        <!-- Modal Templates Popup
+                        -------------------------------------------- -->
+                        {%for post in posts%}
+
+                            <div id="modal-0{{ forloop.counter }}" hidden>
+                                <div class="modal-popup">
+                                    <div class="modal-popup__desc">
+                                        <br><br><br>
+                                        <h5>{{ post.title }}</h5>
+                                        <p>{{ post.description }}</p>
+                                        <p>{{post.views}} view{{views|pluralize}}</p>
+                                    </div>
+
+                                    <a href="{{post.get_absolute_url}}" class="modal-popup__details">Read</a>
+                                </div>
+                            </div> <!-- end modal -->
+                        {%endfor%}
+
+
+{%endblock%}
+
+{%block footer%}
+              <section id="contact" class="s-contact target-section">
+
+                <div class="row contact-top">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">
+                            Get In Touch
+                        </h2>
+
+                        <p class="h2">
+                            I enjoy receiving messages from you. If you have any suggestions, I'll be here waiting for you.
+
+                        </p>
+                        <br><br>
+                      <div class="column-center ">
+                        <div class="text-title" style="text-align:center;">
+
+                            {%include 'blog/modal_suggest.html'%}
+
+                        </div>
+                    </div>
+                    </div>
+                </div> <!-- end contact-top -->
+
+
+                </div> <!-- end contact-bottom -->
+
+            </section> <!-- end contact -->
+
+        </main> <!-- end s-content -->
+
+
+    </div>
+{%endblock%}
+
+
+

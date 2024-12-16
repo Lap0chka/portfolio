@@ -5,7 +5,7 @@ from portfolio.models import Portfolio
 
 class BaseTemplateView(ListView):
     model = Portfolio
-    template_name = 'portfolio/base.html'
+    template_name = 'portfolio/posts.html'
 
 
 

@@ -1,0 +1,285 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 15:34+0100\n"
+"PO-Revision-Date: 2024-12-12 19:28+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: my_portfolio/settings.py:126
+msgid "German"
+msgstr "Немецкий"
+
+#: my_portfolio/settings.py:127
+msgid "English"
+msgstr "Английский"
+
+#: my_portfolio/settings.py:128
+msgid "Українська"
+msgstr "Украинский"
+
+#: my_portfolio/settings.py:129
+msgid "Russian"
+msgstr "Русский"
+
+#: portfolio/templates/portfolio/base.html:11
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: portfolio/templates/portfolio/base.html:48
+msgid "Hello"
+msgstr "Привет"
+
+#: portfolio/templates/portfolio/base.html:49
+msgid "Menu"
+msgstr "Меню"
+
+#: portfolio/templates/portfolio/base.html:57
+msgid "Intro"
+msgstr "Введение"
+
+#: portfolio/templates/portfolio/base.html:60
+msgid "About"
+msgstr "Обо мне"
+
+#: portfolio/templates/portfolio/base.html:63
+msgid "Works"
+msgstr "Работы"
+
+#: portfolio/templates/portfolio/base.html:66
+msgid "Say Hello"
+msgstr "Связаться"
+
+#: portfolio/templates/portfolio/base.html:69
+msgid "Blog"
+msgstr "Блог"
+
+#: portfolio/templates/portfolio/base.html:91
+msgid "I'm Backend Developer"
+msgstr "Я бэкенд-разработчик"
+
+#: portfolio/templates/portfolio/base.html:94
+msgid "Daniil Tkachenko"
+msgstr "Даниил Ткаченко"
+
+#: portfolio/templates/portfolio/base.html:96
+msgid "Why me"
+msgstr "Почему я"
+
+#: portfolio/templates/portfolio/base.html:98
+msgid "Expertise in Django Framework"
+msgstr "Знания Python и ООП"
+
+#: portfolio/templates/portfolio/base.html:99
+msgid "Experience in developing complex systems"
+msgstr "Опыт разработки сложных систем"
+
+#: portfolio/templates/portfolio/base.html:100
+msgid "Ability to optimize and scale"
+msgstr "Умение оптимизировать и масштабировать"
+
+#: portfolio/templates/portfolio/base.html:101
+msgid "Expertise in Python"
+msgstr "Опыт во фреймворке Django"
+
+#: portfolio/templates/portfolio/base.html:106
+msgid "Integration and Interoperability"
+msgstr "Интеграция и совместимость"
+
+#: portfolio/templates/portfolio/base.html:107
+msgid "Collaborative Team Player"
+msgstr "Командный игрок"
+
+#: portfolio/templates/portfolio/base.html:108
+msgid "Continuous Learning and Adaptability"
+msgstr "Непрерывное обучение и адаптивность"
+
+#: portfolio/templates/portfolio/base.html:109
+msgid "Results-oriented approach"
+msgstr "Ориентированность на результат"
+
+#: portfolio/templates/portfolio/base.html:113
+msgid "Hire me"
+msgstr "Нанять меня"
+
+#: portfolio/templates/portfolio/base.html:117
+msgid "My CV"
+msgstr "Моё резюме"
+
+#: portfolio/templates/portfolio/base.html:138
+msgid "about"
+msgstr "Обо мне"
+
+#: portfolio/templates/portfolio/base.html:141
+msgid "Knowledge"
+msgstr "Знания"
+
+#: portfolio/templates/portfolio/base.html:153
+msgid "Experience"
+msgstr "Опыт"
+
+#: portfolio/templates/portfolio/base.html:164
+msgid "August 2020 - January 2022"
+msgstr "Август 2020 - Январь 2022"
+
+#: portfolio/templates/portfolio/base.html:170
+msgid ""
+"\n"
+"                                        For a year, I worked as a backend "
+"developer, creating websites using Django, and\n"
+"                                        utilizing Celery and Redis for task "
+"management and caching. My responsibilities\n"
+"                                        included developing and integrating "
+"APIs, connecting and managing databases, and\n"
+"                                        ensuring efficient and robust web "
+"application performance.\n"
+"                                        "
+msgstr ""
+"\n"
+"                                        В течение года я работал бэкенд-"
+"разработчиком, создавая сайты с использованием Django,\n"
+"                                        а также применяя Celery и Redis для "
+"управления задачами и кэширования. Мои обязанности\n"
+"                                        включали разработку и интеграцию "
+"API, подключение и управление базами данных,\n"
+"                                        а также обеспечение "
+"производительности и надежности веб-приложений.\n"
+"                                        "
+
+#: portfolio/templates/portfolio/base.html:186
+msgid "Education"
+msgstr "Образование"
+
+#: portfolio/templates/portfolio/base.html:194
+msgid "KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS"
+msgstr "ХАРЬКОВСКИЙ НАЦИОНАЛЬНЫЙ УНИВЕРСИТЕТ РАДИОЭЛЕКТРОНИКИ"
+
+#: portfolio/templates/portfolio/base.html:197
+msgid "CyberSecurity"
+msgstr "Кибербезопасность"
+
+#: portfolio/templates/portfolio/base.html:200
+msgid "April 2016 - June 2020"
+msgstr "Апрель 2016 - Июнь 2020"
+
+#: portfolio/templates/portfolio/base.html:205
+msgid ""
+"\n"
+"                                        Cybersecurity is a set of tools, "
+"strategies, security principles, security\n"
+"                                        assurances, risk management "
+"approaches, actions, training, insurance and\n"
+"                                        technologies used to protect cyber "
+"media, resources of organizations and users.\n"
+"                                        Cybersecurity provides for the "
+"achievement and conservation of security features\n"
+"                                        of the resources of the organization "
+"or users directed against the corresponding\n"
+"                                        cyber threats.\n"
+"                                        "
+msgstr ""
+"\n"
+"                                        Кибербезопасность — это набор "
+"инструментов, стратегий, принципов безопасности,\n"
+"                                        гарантий, методов управления "
+"рисками, действий, обучения, страхования и\n"
+"                                        технологий, используемых для защиты "
+"цифровых ресурсов организаций и пользователей.\n"
+"                                        Кибербезопасность обеспечивает "
+"достижение и поддержание защиты ресурсов\n"
+"                                        организации или пользователей от "
+"соответствующих киберугроз.\n"
+"                                        "
+
+#: portfolio/templates/portfolio/base.html:221
+msgid "Kyiv National Economic University Romny college"
+msgstr "Роменский колледж Киевского национального экономического университета"
+
+#: portfolio/templates/portfolio/base.html:224
+msgid "System Administrator"
+msgstr "Системный администратор"
+
+#: portfolio/templates/portfolio/base.html:227
+msgid "August 2012 - June 2016"
+msgstr "Август 2012 - Июнь 2016"
+
+#: portfolio/templates/portfolio/base.html:232
+msgid ""
+"\n"
+"                                        I studied at Romensky College of "
+"Kyiv National Economic University (KNEU) for 4\n"
+"                                        years, specializing in System "
+"Administration. During my time there, I gained\n"
+"                                        in-depth knowledge and skills in "
+"managing and maintaining information systems,\n"
+"                                        configuring servers, handling "
+"network devices, ensuring system security, and\n"
+"                                        providing technical support to "
+"users. This comprehensive education has equipped\n"
+"                                        me with the expertise needed to "
+"excel in the field of System Administration.\n"
+"                                        "
+msgstr ""
+"\n"
+"                                        Я учился в Роменском колледже "
+"Киевского национального экономического университета (КНЕУ) 4 года,\n"
+"                                        специализируясь на системном "
+"администрировании. Во время учебы я получил глубокие знания и навыки в\n"
+"                                        управлении и поддержке "
+"информационных систем, настройке серверов, работе с сетевыми устройствами,\n"
+"                                        обеспечении безопасности систем и "
+"предоставлении технической поддержки пользователям.\n"
+"                                        Это образование подготовило меня к "
+"успешной работе в области системного администрирования.\n"
+"                                        "
+
+#: portfolio/templates/portfolio/base.html:257
+msgid "Recent Works"
+msgstr "Последние работы"
+
+#: portfolio/templates/portfolio/base.html:261
+msgid "Here are some of my projects. Feel free to check them out."
+msgstr "Вот некоторые из моих проектов."
+
+#: portfolio/templates/portfolio/base.html:301
+msgid "What I used: "
+msgstr "Что я использовал: "
+
+#: portfolio/templates/portfolio/base.html:324
+msgid "Get In Touch"
+msgstr "Свяжитесь со мной"
+
+#: portfolio/templates/portfolio/base.html:328
+msgid ""
+"\n"
+"                            If you need a website or want to hire me, feel "
+"free to reach out!\n"
+"                            "
+msgstr ""
+"\n"
+"                            Если вам нужен сайт или вы хотите нанять меня, пишите мне!\n"
+"                            "
+
+
+#: portfolio/templates/portfolio/base.html:338
+msgid "Reach me at"
+msgstr "Напишите мне на"
+
+#: portfolio/templates/portfolio/base.html:360
+msgid "Site Language"
+msgstr "Язык сайта"

@@ -1,0 +1,279 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 15:28+0100\n"
+"PO-Revision-Date: 2024-12-12 19:35+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: my_portfolio/settings.py:126
+msgid "German"
+msgstr "Deutsch"
+
+#: my_portfolio/settings.py:127
+msgid "English"
+msgstr "Englisch"
+
+#: my_portfolio/settings.py:128
+msgid "Українська"
+msgstr "Ukrainisch"
+
+#: my_portfolio/settings.py:129
+msgid "Russian"
+msgstr "Russisch"
+
+#: portfolio/templates/portfolio/base.html:11
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: portfolio/templates/portfolio/base.html:48
+msgid "Hello"
+msgstr "Hallo"
+
+#: portfolio/templates/portfolio/base.html:49
+msgid "Menu"
+msgstr "Menu"
+
+#: portfolio/templates/portfolio/base.html:57
+msgid "Intro"
+msgstr "Einleitung"
+
+#: portfolio/templates/portfolio/base.html:60
+msgid "About"
+msgstr "Über mich"
+
+#: portfolio/templates/portfolio/base.html:63
+msgid "Works"
+msgstr "Projekte"
+
+#: portfolio/templates/portfolio/base.html:66
+msgid "Say Hello"
+msgstr "Sag Hallo"
+
+#: portfolio/templates/portfolio/base.html:69
+msgid "Blog"
+msgstr "Blog"
+
+#: portfolio/templates/portfolio/base.html:91
+msgid "I'm Backend Developer"
+msgstr "Ich bin Backend-Entwickler"
+
+#: portfolio/templates/portfolio/base.html:94
+msgid "Daniil Tkachenko"
+msgstr "Daniil Tkachenko"
+
+#: portfolio/templates/portfolio/base.html:96
+msgid "Why me"
+msgstr "Warum ich"
+
+#: portfolio/templates/portfolio/base.html:98
+msgid "Expertise in Django Framework"
+msgstr "Expertise im Django-Framework"
+
+#: portfolio/templates/portfolio/base.html:99
+msgid "Experience in developing complex systems"
+msgstr "Erfahrung in der Entwicklung komplexer Systeme"
+
+#: portfolio/templates/portfolio/base.html:100
+msgid "Ability to optimize and scale"
+msgstr "Fähigkeit zur Optimierung und Skalierung"
+
+#: portfolio/templates/portfolio/base.html:101
+msgid "Expertise in Python"
+msgstr "Expertise in Python"
+
+#: portfolio/templates/portfolio/base.html:106
+msgid "Integration and Interoperability"
+msgstr "Integration und Interoperabilität"
+
+#: portfolio/templates/portfolio/base.html:107
+msgid "Collaborative Team Player"
+msgstr "Teamfähiger Mitarbeiter"
+
+#: portfolio/templates/portfolio/base.html:108
+msgid "Continuous Learning and Adaptability"
+msgstr "Kontinuierliches Lernen und Anpassungsfähigkeit"
+
+#: portfolio/templates/portfolio/base.html:109
+msgid "Results-oriented approach"
+msgstr "Ergebnisorientierter Ansatz"
+
+#: portfolio/templates/portfolio/base.html:113
+msgid "Hire me"
+msgstr "Stell mich ein"
+
+#: portfolio/templates/portfolio/base.html:117
+msgid "My CV"
+msgstr "Lebenslauf"
+
+#: portfolio/templates/portfolio/base.html:138
+msgid "about"
+msgstr "Über mich"
+
+#: portfolio/templates/portfolio/base.html:141
+msgid "Knowledge"
+msgstr "ERFAHRUNG"
+
+#: portfolio/templates/portfolio/base.html:153
+msgid "Experience"
+msgstr "Berufserfahrung"
+
+#: portfolio/templates/portfolio/base.html:164
+msgid "August 2020 - January 2022"
+msgstr "August 2020 - Januar 2022"
+
+#: portfolio/templates/portfolio/base.html:170
+msgid ""
+"\n"
+"                                        For a year, I worked as a backend "
+"developer, creating websites using Django, and\n"
+"                                        utilizing Celery and Redis for task "
+"management and caching. My responsibilities\n"
+"                                        included developing and integrating "
+"APIs, connecting and managing databases, and\n"
+"                                        ensuring efficient and robust web "
+"application performance.\n"
+"                                        "
+msgstr ""
+"\n"
+"Ein Jahr lang arbeitete ich als Backend-Entwickler, erstellte Websites mit "
+"Django und nutzte Celery und Redis für Aufgabenverwaltung und Caching. Meine "
+"Aufgaben umfassten die Entwicklung und Integration von APIs, das Verbinden "
+"und Verwalten von Datenbanken sowie die Sicherstellung einer effizienten und "
+"robusten Webanwendungsleistung."
+
+#: portfolio/templates/portfolio/base.html:186
+msgid "Education"
+msgstr "Ausbildung"
+
+#: portfolio/templates/portfolio/base.html:194
+msgid "KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS"
+msgstr "Charkiwer Nationale Universität für Radioelektronik"
+
+#: portfolio/templates/portfolio/base.html:197
+msgid "CyberSecurity"
+msgstr "Cyber-Sicherheit"
+
+#: portfolio/templates/portfolio/base.html:200
+msgid "April 2016 - June 2020"
+msgstr "April 2016 - Juni 2020"
+
+#: portfolio/templates/portfolio/base.html:205
+msgid ""
+"\n"
+"                                        Cybersecurity is a set of tools, "
+"strategies, security principles, security\n"
+"                                        assurances, risk management "
+"approaches, actions, training, insurance and\n"
+"                                        technologies used to protect cyber "
+"media, resources of organizations and users.\n"
+"                                        Cybersecurity provides for the "
+"achievement and conservation of security features\n"
+"                                        of the resources of the organization "
+"or users directed against the corresponding\n"
+"                                        cyber threats.\n"
+"                                        "
+msgstr ""
+"\n"
+"Cyber-Sicherheit ist eine Reihe von Werkzeugen, Strategien, "
+"Sicherheitsprinzipien, Sicherheitsgarantien, Risikomanagement-Ansätzen, "
+"Maßnahmen, Schulungen, Versicherungen und Technologien zum Schutz von "
+"Cybermedien, Ressourcen von Organisationen und Nutzern. Cyber-Sicherheit "
+"sorgt für das Erreichen und Erhalten von Sicherheitsmerkmalen der Ressourcen "
+"der Organisation oder Nutzer gegen entsprechende Cyber-Bedrohungen."
+
+#: portfolio/templates/portfolio/base.html:221
+msgid "Kyiv National Economic University Romny college"
+msgstr "Romen-College der Kiewer Nationalen Wirtschaftsuniversität"
+
+#: portfolio/templates/portfolio/base.html:224
+msgid "System Administrator"
+msgstr "Systemadministrator"
+
+#: portfolio/templates/portfolio/base.html:227
+msgid "August 2012 - June 2016"
+msgstr "August 2012 - Juni 2016"
+
+#: portfolio/templates/portfolio/base.html:232
+msgid ""
+"\n"
+"                                        I studied at Romensky College of "
+"Kyiv National Economic University (KNEU) for 4\n"
+"                                        years, specializing in System "
+"Administration. During my time there, I gained\n"
+"                                        in-depth knowledge and skills in "
+"managing and maintaining information systems,\n"
+"                                        configuring servers, handling "
+"network devices, ensuring system security, and\n"
+"                                        providing technical support to "
+"users. This comprehensive education has equipped\n"
+"                                        me with the expertise needed to "
+"excel in the field of System Administration.\n"
+"                                        "
+msgstr ""
+"\n"
+"Ich studierte vier Jahre am Romen-College der Kiewer Nationalen "
+"Wirtschaftsuniversität (KNEU) mit Schwerpunkt Systemadministration. Während "
+"dieser Zeit erwarb ich fundiertes Wissen und Fähigkeiten im Verwalten und "
+"Warten von Informationssystemen, Konfigurieren von Servern, Umgang mit "
+"Netzwerkgeräten, Sicherstellen der Systemsicherheit und Bereitstellen von "
+"technischem Support für Benutzer. Diese umfassende Ausbildung hat mich mit "
+"dem nötigen Fachwissen ausgestattet, um im Bereich der Systemadministration "
+"erfolgreich zu sein."
+
+#: portfolio/templates/portfolio/base.html:257
+msgid "Recent Works"
+msgstr "Letzte Projekte"
+
+#: portfolio/templates/portfolio/base.html:261
+msgid "Here are some of my projects. Feel free to check them out."
+msgstr "Hier sind einige meiner Projekte. Schau sie dir gerne an!"
+
+#: portfolio/templates/portfolio/base.html:301
+msgid "What I used: "
+msgstr "Was ich verwendet habe: "
+
+#: portfolio/templates/portfolio/base.html:324
+msgid "Get In Touch"
+msgstr "Kontakt aufnehmen"
+
+#: portfolio/templates/portfolio/base.html:328
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            I love to hear from you. Whether you have a "
+#| "question or just want to chat.\n"
+#| "                            "
+msgid ""
+"\n"
+"                            If you need a website or want to hire me, feel "
+"free to reach out!\n"
+"                            "
+msgstr ""
+"\n"
+"Wenn Sie eine Website brauchen oder mich einstellen möchten, schreiben Sie "
+"mir gern!"
+
+#: portfolio/templates/portfolio/base.html:338
+msgid "Reach me at"
+msgstr "Erreichen Sie mich unter"
+
+#: portfolio/templates/portfolio/base.html:360
+msgid "Site Language"
+msgstr "Seitensprache"
+
+#~ msgid "description"
+#~ msgstr "beschreibung"
