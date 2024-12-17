@@ -1,6 +1,6 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
-from blog.models import Blog, Suggest
+from blog.models import Blog, Suggest, Comment
 
 
 @admin.register(Blog)
@@ -13,3 +13,8 @@ class BlogAdmin(TranslatableAdmin):
 @admin.register(Suggest)
 class SuggestAdmin(admin.ModelAdmin):
     list_display = ('title', 'description')
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('username', 'post')

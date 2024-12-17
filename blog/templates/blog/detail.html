@@ -1,4 +1,5 @@
 {%extends 'portfolio/base.html' %}
+{% load i18n %}
 {%load static%}
 {%block title %}{{object.title}}{% endblock %}
 <style>
@@ -7,23 +8,68 @@
     }
 </style>
 {%block menu%}
-
-  <li><a href="{% url 'blog' %}" style="color: orange;" class="">Back</a></li>
+<li><a href="{% url 'blog' %}" style="color: orange;font-weight: bold;" class="">Back</a></li>
 {%endblock%}
 
 {%block context%}
+    <div class="column-center" style=>
+        <h3 class="text-title" style="text-align:center">
+            {% include 'portfolio/includes/messages.html' %}
+            <br>{{object.title}}
+        </h3>
+        <p class="text-title" style="margin-left:15%;margin-right:15%;text-align:justify">
+            {{object.article|safe}}</p>
+    </div>
+<section id="comments" class="s-contact target-section" style="width: 100%; padding: 20px 0;">
+    <div class="container">
+        <hr>
+        <h2 class="text-pretitle" style="text-align: center;">
+            {% trans "Leave your comment here" %}
+        </h2>
+        <br><br>
+        <div class="flex-container" style="display: flex; justify-content: space-between; gap: 40px;">
+            <div class="text-center" style="flex: 1; max-width: 40%; margin-left: 2%">
+                <form class="w-full" method="post" style="padding: 20px; border-radius: 10px;">
+                    {% csrf_token %}
+                    <label class="stext-102 cl3" for="{{ form.username.id_for_label }}"
+                           style="display: block; margin-bottom: 10px;">{% trans "Your name" %}
+                    </label>
+                    {{form.username}}
+                    <label class="stext-102 cl3" for="{{ form.body.id_for_label }}"
+                           style="display: block; margin-bottom: 10px;">{% trans "Your review" %}
+                    </label>
+                    {{form.body}}
 
-                    <div class="column-center" style=>
-                        <h3 class="text-title" style="text-align:center">
-                            <br>{{object.title}}
-                        </h3>
-                        <p class="text-title" style="margin-left:15%;margin-right:15%;text-align:justify">{{object.arrticle|safe}}</p>
+                    <button type="submit"
+                            class="btn btn--medium u-halfwidth contact-btn ">
+                        {% trans "Submit" %}
+                    </button>
+                </form>
+            </div>
+            <div class="comments-container" style="flex: 1; max-width: 48%;">
+                <div class="text-center" style="margin-bottom: 30px; padding: 20px; border-radius: 10px;">
+                    {%for comment in comments%}
+                    <div class="">
+                        <div class="flex-w flex-sb-m p-b-17">
+                            <span class="mtext-107 cl2 p-r-20" style="font-weight: bold;">
+                                {{ comment.username }}
+                            </span>
+                        </div>
+                        <p class="stext-102 cl6">
+                            {{ comment.body }}
+                        </p>
                     </div>
+                    {%endfor%}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 {%endblock%}
 
-{%block blogs%}
-{%endblock%}
-{%block footer%}
-{%endblock%}
+
 

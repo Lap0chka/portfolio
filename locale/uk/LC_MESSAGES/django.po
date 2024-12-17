@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:28+0100\n"
+"POT-Creation-Date: 2024-12-17 21:11+0100\n"
 "PO-Revision-Date: 2024-12-12 20:17+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,19 +22,70 @@ msgstr ""
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: my_portfolio/settings.py:126
+#: blog/templates/blog/detail.html:28
+msgid "Leave your comment here"
+msgstr "Залиште свій коментар тут"
+
+#: blog/templates/blog/detail.html:36
+msgid "Your name"
+msgstr "Ваше ім'я"
+
+#: blog/templates/blog/detail.html:40
+msgid "Your review"
+msgstr "Ваш відгук"
+
+#: blog/templates/blog/detail.html:46
+msgid "Submit"
+msgstr "Надіслати"
+
+#: blog/templates/blog/modal_suggest.html:12
+msgid "Suggest news"
+msgstr "Запропонувати новину"
+
+#: blog/templates/blog/modal_suggest.html:19
+msgid "Title"
+msgstr "Заголовок"
+
+#: blog/templates/blog/modal_suggest.html:22
+msgid "Description"
+msgstr "Опис"
+
+#: blog/templates/blog/modal_suggest.html:25
+msgid "Link to article (source)"
+msgstr "Посилання на статтю (джерело)"
+
+#: blog/templates/blog/posts.html:11 portfolio/templates/portfolio/base.html:66
+msgid "Say Hello"
+msgstr "Зв’язатися"
+
+#: blog/templates/blog/posts.html:30
+msgid "Articles"
+msgstr "Статті"
+
+#: blog/templates/blog/posts.html:33
+msgid "Sometimes I will add interesting information here."
+msgstr "Іноді я буду додавати цікаву інформацію тут."
+
+#: blog/templates/blog/posts.html:97
+msgid ""
+"I enjoy receiving messages from you. If you have any suggestions, I'll be "
+"here."
+msgstr ""
+"Мені приємно отримувати від вас повідомлення. Якщо у вас є пропозиції, я тут."
+
+#: my_portfolio/settings.py:119
 msgid "German"
 msgstr "Німецька"
 
-#: my_portfolio/settings.py:127
+#: my_portfolio/settings.py:120
 msgid "English"
 msgstr "Англійська"
 
-#: my_portfolio/settings.py:128
+#: my_portfolio/settings.py:121
 msgid "Українська"
 msgstr "Українська"
 
-#: my_portfolio/settings.py:129
+#: my_portfolio/settings.py:122
 msgid "Russian"
 msgstr "Російська"
 
@@ -61,10 +112,6 @@ msgstr "Про мене"
 #: portfolio/templates/portfolio/base.html:63
 msgid "Works"
 msgstr "Роботи"
-
-#: portfolio/templates/portfolio/base.html:66
-msgid "Say Hello"
-msgstr "Зв’язатися"
 
 #: portfolio/templates/portfolio/base.html:69
 msgid "Blog"
@@ -115,14 +162,10 @@ msgid "Results-oriented approach"
 msgstr "Орієнтація на результат"
 
 #: portfolio/templates/portfolio/base.html:113
-#, fuzzy
-#| msgid "Hire me."
 msgid "Hire me"
 msgstr "Найміть мене."
 
 #: portfolio/templates/portfolio/base.html:117
-#, fuzzy
-#| msgid "My CV."
 msgid "My CV"
 msgstr "Моє резюме."
 
@@ -265,31 +308,25 @@ msgstr "Ось деякі з моїх проєктів. Ознайомтесь �
 msgid "What I used: "
 msgstr "Що я використовував: "
 
-#: portfolio/templates/portfolio/base.html:324
+#: portfolio/templates/portfolio/includes/footer.html:8
 msgid "Get In Touch"
 msgstr "Зв’яжіться зі мною"
 
-#: portfolio/templates/portfolio/base.html:328
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            I love to hear from you. Whether you have a "
-#| "question or just want to chat.\n"
-#| "                            "
-msgid ""
-"\n"
-"                            If you need a website or want to hire me, feel "
-"free to reach out!\n"
-"                            "
-msgstr ""
-"\n"
-"Потрібен сайт? Звертайтеся! Бажаєте просто поспілкуватися? Пишіть, буду "
-"радий!"
+#: portfolio/templates/portfolio/includes/footer.html:12
+msgid "If you need a website or want to hire me, feel free to reach out!"
+msgstr "Потрібен сайт? Звертайтеся! Бажаєте просто поспілкуватися? Пишіть, буду радий!"
 
-#: portfolio/templates/portfolio/base.html:338
+#: portfolio/templates/portfolio/includes/footer.html:20
 msgid "Reach me at"
-msgstr "Напишіть мені на"
+msgstr "Напишіть мені"
 
-#: portfolio/templates/portfolio/base.html:360
+#: portfolio/templates/portfolio/includes/footer.html:28
+msgid "Social"
+msgstr "Соціальні мережі"
+
+#: portfolio/templates/portfolio/includes/footer.html:43
 msgid "Site Language"
 msgstr "Мова сайту"
+
+#~ msgid "Read"
+#~ msgstr "Читати"

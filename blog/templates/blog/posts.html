@@ -1,39 +1,46 @@
 {%extends 'portfolio/base.html'%}
-
 {%load static%}
+{% load i18n %}
 {%block title%}My_blog{%endblock%}
 
 {%block menu%}
     <li><a href="{% url 'portfolio' %}" style="color: orange;font-size: 13px; font-weight: bold;">Intro</a></li>
-    <li><a href="#contact" style="font-size: 13px; font-weight: bold;" class="smoothscroll">Suggest news</a></li>
+<li><a href="#" style="font-weight: bold;" class="smoothscroll">Order by views</a></li>
+<li><a href="#suggest" class="smoothscroll">Suggest news</a></li>
+<li>
+    <a href="#contact" class="smoothscroll">{% trans "Say Hello" %}</a>
+</li>
 {%endblock%}
 
 {%block context%}
+<main class="s-content">
 
-{%endblock%}
 
-{%block blogs%}
-{% if messages %}
+    <!-- ### intro
+    ================================================== -->
+    <section id="intro" class="s-intro target-section">
+      <div class="row contact-top">
+        {% if messages %}
         {% for message in messages %}
             {{ message }}
         {% endfor %}
     {% endif %}
             <div class="column lg-12" data-animate-block>
-
                         <h2 class="text-pretitle" data-animate-el>
-                            Articles
+                            {% trans "Articles" %}
                         </h2>
                         <p class="h1" data-animate-el>
-                            Sometimes I will add interesting information here.
+                            {% trans "Sometimes I will add interesting information here." %}
                         </p>
-
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
                             {%for post in posts%}
                                 <li class="folio-list__item column" data-animate-el>
                                     <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                         <div class="folio-list__item-pic">
+                                            {%if post.picture%}
                                             <img src="{{post.picture.url}}"
-                                                 srcset="{% get_media_prefix %}media/{{post.picture.url}} 2x"  alt="">
+                                                 srcset="{{post.picture.url}} 2x" alt="">
+                                            {%endif%}
                                         </div>
 
                                         <div class="folio-list__item-text">
@@ -47,7 +54,7 @@
                                     </a>
                                 </li> <!--end folio-list__item -->
 
-                                  {%endfor%}
+                            {%endfor%}
 
 
                             </ul> <!-- end folio-list -->
@@ -75,27 +82,20 @@
                                         <p>{{post.views}} view{{views|pluralize}}</p>
                                     </div>
 
-                                    <a href="{{post.get_absolute_url}}" class="modal-popup__details">Read</a>
+                                    <a href="{{post.get_absolute_url}}" class="modal-popup__details">{% trans
+                                        "Read"%}</a>
                                 </div>
                             </div> <!-- end modal -->
                         {%endfor%}
+      </div>
+    </section>
 
-
-{%endblock%}
-
-{%block footer%}
-              <section id="contact" class="s-contact target-section">
-
+    <section id="suggest" class="s-contact target-section">
                 <div class="row contact-top">
                     <div class="column lg-12">
                         <h2 class="text-pretitle">
-                            Get In Touch
+                            {% trans "I enjoy receiving messages from you. If you have any suggestions, I'll be here."%}
                         </h2>
-
-                        <p class="h2">
-                            I enjoy receiving messages from you. If you have any suggestions, I'll be here waiting for you.
-
-                        </p>
                         <br><br>
                       <div class="column-center ">
                         <div class="text-title" style="text-align:center;">
@@ -107,16 +107,9 @@
                     </div>
                 </div> <!-- end contact-top -->
 
+    </section> <!-- end contact -->
 
-                </div> <!-- end contact-bottom -->
-
-            </section> <!-- end contact -->
-
-        </main> <!-- end s-content -->
-
-
-    </div>
+</main>
 {%endblock%}
-
 
 

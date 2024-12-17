@@ -1,3 +1,4 @@
+{% load i18n %}
 <style>
 .form-popup{
     display:none;
@@ -8,66 +9,25 @@
     }
 </style>
 
-<button onclick="openForm(event)">Suggest news</button>
-<div class="form-popup" id="myForm">
-  <form id ='full_suggest' action="{% url 'blog' %}" method="post">
+<button onclick="openForm(event)">{% trans "Suggest news" %}</button>
+
+<div class="form-popup" id="myForm" style="display: none;">
+  <form id="full_suggest" action="{% url 'blog' %}" method="post">
     {% csrf_token %}
     <h1>News</h1>
-    <label for="title"><b>Title</b></label>
-    {{form.title}}
-    <label for="psw"><b>Description</b></label>
-    {{form.description}}
-    <label for="psw"><b>Link to article(source)</b></label>
-    {{form.link}}
+
+    <label for="title"><b>{% trans "Title" %}</b></label>
+    {{ form.title }}
+
+    <label for="description"><b>{% trans "Description" %}</b></label>
+    {{ form.description }}
+
+    <label for="link"><b>{% trans "Link to article (source)" %}</b></label>
+    {{ form.link }}
+
     <button type="submit" class="btn">Send</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
 
-<script>
-function openForm() {
-  var formPopup = document.getElementById("myForm");
-  formPopup.style.display = "block";
 
-  // Прокручиваем страницу к модальному окну
-  smoothScrollTo(formPopup);
-
-  document.body.classList.add("form-popup-open");
-}
-
-function closeForm() {
-  var formPopup = document.getElementById("myForm");
-  formPopup.style.display = "none";
-  document.body.classList.remove("form-popup-open");
-}
-
-function smoothScrollTo(element) {
-  const startingY = window.pageYOffset;
-  const elementY = window.pageYOffset + element.getBoundingClientRect().top;
-  const targetY = document.body.scrollHeight - window.innerHeight;
-
-  const diff = targetY - startingY;
-  const easing = easeInOutQuad;
-  let start;
-
-  if (!diff) return;
-
-  window.requestAnimationFrame(function step(timestamp) {
-    if (!start) start = timestamp;
-
-    const time = timestamp - start;
-    let percent = Math.min(time / 500, 1);
-    percent = easing(percent);
-
-    window.scrollTo(0, startingY + diff * percent);
-
-    if (time < 500) {
-      window.requestAnimationFrame(step);
-    }
-  });
-}
-
-function easeInOutQuad(t) {
-  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-}
-</script>

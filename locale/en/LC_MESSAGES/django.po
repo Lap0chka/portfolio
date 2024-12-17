@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:28+0100\n"
+"POT-Creation-Date: 2024-12-17 21:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: my_portfolio/settings.py:126
+#: blog/templates/blog/detail.html:28
+msgid "Leave your comment here"
+msgstr ""
+
+#: blog/templates/blog/detail.html:36
+msgid "Your name"
+msgstr ""
+
+#: blog/templates/blog/detail.html:40
+msgid "Your review"
+msgstr ""
+
+#: blog/templates/blog/detail.html:46
+msgid "Submit"
+msgstr ""
+
+#: blog/templates/blog/modal_suggest.html:12
+msgid "Suggest news"
+msgstr ""
+
+#: blog/templates/blog/modal_suggest.html:19
+msgid "Title"
+msgstr ""
+
+#: blog/templates/blog/modal_suggest.html:22
+msgid "Description"
+msgstr ""
+
+#: blog/templates/blog/modal_suggest.html:25
+msgid "Link to article (source)"
+msgstr ""
+
+#: blog/templates/blog/posts.html:11 portfolio/templates/portfolio/base.html:66
+msgid "Say Hello"
+msgstr ""
+
+#: blog/templates/blog/posts.html:30
+msgid "Articles"
+msgstr ""
+
+#: blog/templates/blog/posts.html:33
+msgid "Sometimes I will add interesting information here."
+msgstr ""
+
+#: blog/templates/blog/posts.html:97
+msgid ""
+"I enjoy receiving messages from you. If you have any suggestions, I'll be "
+"here."
+msgstr ""
+
+#: my_portfolio/settings.py:119
 msgid "German"
 msgstr ""
 
-#: my_portfolio/settings.py:127
+#: my_portfolio/settings.py:120
 msgid "English"
 msgstr ""
 
-#: my_portfolio/settings.py:128
+#: my_portfolio/settings.py:121
 msgid "Українська"
 msgstr ""
 
-#: my_portfolio/settings.py:129
+#: my_portfolio/settings.py:122
 msgid "Russian"
 msgstr ""
 
@@ -56,10 +106,6 @@ msgstr ""
 
 #: portfolio/templates/portfolio/base.html:63
 msgid "Works"
-msgstr ""
-
-#: portfolio/templates/portfolio/base.html:66
-msgid "Say Hello"
 msgstr ""
 
 #: portfolio/templates/portfolio/base.html:69
@@ -223,22 +269,22 @@ msgstr ""
 msgid "What I used: "
 msgstr ""
 
-#: portfolio/templates/portfolio/base.html:324
+#: portfolio/templates/portfolio/includes/footer.html:8
 msgid "Get In Touch"
 msgstr ""
 
-#: portfolio/templates/portfolio/base.html:328
-msgid ""
-"\n"
-"                            If you need a website or want to hire me, feel "
-"free to reach out!\n"
-"                            "
+#: portfolio/templates/portfolio/includes/footer.html:12
+msgid "If you need a website or want to hire me, feel free to reach out!"
 msgstr ""
 
-#: portfolio/templates/portfolio/base.html:338
+#: portfolio/templates/portfolio/includes/footer.html:20
 msgid "Reach me at"
 msgstr ""
 
-#: portfolio/templates/portfolio/base.html:360
+#: portfolio/templates/portfolio/includes/footer.html:28
+msgid "Social"
+msgstr ""
+
+#: portfolio/templates/portfolio/includes/footer.html:43
 msgid "Site Language"
 msgstr ""
