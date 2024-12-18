@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 21:11+0100\n"
+"POT-Creation-Date: 2024-12-18 16:12+0100\n"
 "PO-Revision-Date: 2024-12-12 19:35+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
+#: blog/templates/blog/detail.html:12
+msgid "Back"
+msgstr "Zurück"
+
 #: blog/templates/blog/detail.html:28
+msgid "Date"
+msgstr "Datum"
+
+#: blog/templates/blog/detail.html:33
+msgid "Views"
+msgstr "Aufrufe"
+
+#: blog/templates/blog/detail.html:41
 msgid "Leave your comment here"
-msgstr "Оставьте свой комментарий здесь"
+msgstr "Hinterlassen Sie hier Ihren Kommentar"
 
-#: blog/templates/blog/detail.html:36
+#: blog/templates/blog/detail.html:49
 msgid "Your name"
-msgstr "Ваше имя"
+msgstr "Ihr Name"
 
-#: blog/templates/blog/detail.html:40
+#: blog/templates/blog/detail.html:53
 msgid "Your review"
-msgstr "Ваш отзыв"
+msgstr "Ihre Bewertung"
 
-#: blog/templates/blog/detail.html:46
+#: blog/templates/blog/detail.html:59
 msgid "Submit"
-msgstr "Отправить"
+msgstr "Absenden"
 
 #: blog/templates/blog/modal_suggest.html:12
 msgid "Suggest news"
@@ -300,7 +312,9 @@ msgstr "Kontakt aufnehmen"
 
 #: portfolio/templates/portfolio/includes/footer.html:12
 msgid "If you need a website or want to hire me, feel free to reach out!"
-msgstr "Wenn Sie eine Website brauchen oder mich einstellen möchten, schreiben Sie mir gern!"
+msgstr ""
+"Wenn Sie eine Website brauchen oder mich einstellen möchten, schreiben Sie "
+"mir gern!"
 
 #: portfolio/templates/portfolio/includes/footer.html:20
 msgid "Reach me at"
@@ -310,7 +324,11 @@ msgstr "Erreichen Sie mich unter"
 msgid "Social"
 msgstr "Soziale Netzwerke"
 
-#: portfolio/templates/portfolio/includes/footer.html:43
+#: portfolio/templates/portfolio/includes/footer.html:37
+msgid "SayHello"
+msgstr "SagHallo"
+
+#: portfolio/templates/portfolio/includes/footer.html:44
 msgid "Site Language"
 msgstr "Seitensprache"
 

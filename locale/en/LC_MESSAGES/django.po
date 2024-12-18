@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 21:08+0100\n"
+"POT-Creation-Date: 2024-12-18 16:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: blog/templates/blog/detail.html:12
+msgid "Back"
+msgstr ""
+
 #: blog/templates/blog/detail.html:28
+msgid "Date"
+msgstr ""
+
+#: blog/templates/blog/detail.html:33
+msgid "Views"
+msgstr ""
+
+#: blog/templates/blog/detail.html:41
 msgid "Leave your comment here"
 msgstr ""
 
-#: blog/templates/blog/detail.html:36
+#: blog/templates/blog/detail.html:49
 msgid "Your name"
 msgstr ""
 
-#: blog/templates/blog/detail.html:40
+#: blog/templates/blog/detail.html:53
 msgid "Your review"
 msgstr ""
 
-#: blog/templates/blog/detail.html:46
+#: blog/templates/blog/detail.html:59
 msgid "Submit"
 msgstr ""
 
@@ -285,6 +297,10 @@ msgstr ""
 msgid "Social"
 msgstr ""
 
-#: portfolio/templates/portfolio/includes/footer.html:43
+#: portfolio/templates/portfolio/includes/footer.html:37
+msgid "SayHello"
+msgstr ""
+
+#: portfolio/templates/portfolio/includes/footer.html:44
 msgid "Site Language"
 msgstr ""

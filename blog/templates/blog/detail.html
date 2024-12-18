@@ -2,13 +2,20 @@
 {% load i18n %}
 {%load static%}
 {%block title %}{{object.title}}{% endblock %}
-<style>
-     b{
-    color:black;
-    }
-</style>
 {%block menu%}
-<li><a href="{% url 'blog' %}" style="color: orange;font-weight: bold;" class="">Back</a></li>
+<div class="header-mobile">
+    <span class="mobile-home-link"><a style="color: orange;font-weight: bold;" href="{% url 'blog' %}">{% trans "Back" %}</a></span>
+</div>
+<div class="row wide main-nav-wrap">
+    <nav class="column lg-12 main-nav">
+        <ul>
+            <li><a href="{% url 'blog' %}" style="color: orange;font-weight: bold;" class="">
+                {% trans "Back" %}
+            </a></li>
+        </ul>
+    </nav>
+</div>
+
 {%endblock%}
 
 {%block context%}
@@ -20,6 +27,18 @@
         <p class="text-title" style="margin-left:15%;margin-right:15%;text-align:justify">
             {{object.article|safe}}</p>
     </div>
+<div class="row about-timelines" data-animate-block>
+    <div class="column lg-6 tab-12">
+        <h2 class="text-pretitle" data-animate-el>
+            {% trans "Date" %}: {{object.created_at}}
+        </h2>
+    </div>
+    <div class="column lg-6 tab-12">
+        <h2 class="text-pretitle" data-animate-el>
+            {% trans "Views" %} : {{object.views}}
+        </h2>
+    </div>
+</div>
 <section id="comments" class="s-contact target-section" style="width: 100%; padding: 20px 0;">
     <div class="container">
         <hr>
@@ -39,11 +58,12 @@
                            style="display: block; margin-bottom: 10px;">{% trans "Your review" %}
                     </label>
                     {{form.body}}
-
                     <button type="submit"
-                            class="btn btn--medium u-halfwidth contact-btn ">
+                           class="btn btn--medium contact-btn responsive-btn">
                         {% trans "Submit" %}
                     </button>
+
+
                 </form>
             </div>
             <div class="comments-container" style="flex: 1; max-width: 48%;">

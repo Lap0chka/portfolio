@@ -887,3 +887,14 @@ button.swiper-pagination-bullet {
   background-color: #343a40;
   color: #fff;
 }
+
+.responsive-btn {
+    width: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .responsive-btn {
+        width: 100%;
+    }
+}

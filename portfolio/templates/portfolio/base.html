@@ -43,7 +43,7 @@
         <!-- ## site header
         ================================================== -->
         <header class="s-header">
-
+            {%block menu%}
             <div class="header-mobile">
                 <span class="mobile-home-link"><a href="index.html">{% trans "Hello" %}</a></span>
                 <a class="mobile-menu-toggle" href="#"><span>{% trans "Menu" %}</span></a>
@@ -51,7 +51,7 @@
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        {%block menu%}
+
 
                         <li class="current">
                             <a href="#intro" class="smoothscroll">{% trans "Intro" %}</a>
@@ -68,11 +68,11 @@
                         <li>
                             <a href="{% url 'blog' %}" style="color: orange;" class="">{% trans "Blog" %}</a>
                         </li>
-                        {%endblock%}
+
                     </ul>
                 </nav>
             </div>
-
+            {%endblock%}
         </header> <!-- end s-header -->
 
 {%block context%}
@@ -249,72 +249,72 @@
 
             <!-- ### works
             ================================================== -->
-            <section id="works" class="s-works target-section">
-                <div class="row works-portfolio">
+        <section id="works" class="s-works target-section">
+            <div class="row works-portfolio">
 
-                    <div class="column lg-12" data-animate-block>
-                        <h2 class="text-pretitle" data-animate-el>
-                            {% trans "Recent Works" %}
+                <div class="column lg-12" data-animate-block>
+                    <h2 class="text-pretitle" data-animate-el>
+                        {% trans "Recent Works" %}
 
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            {% trans "Here are some of my projects. Feel free to check them out." %}
+                    </h2>
+                    <p class="h1" data-animate-el>
+                        {% trans "Here are some of my projects. Feel free to check them out." %}
 
-                        </p>
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                            {%for project in object_list%}
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
-                                    <div class="folio-list__item-pic">
-                                        <img src="{% get_media_prefix %}media/{{project.image.url}}"
-                                             srcset="{% get_media_prefix %}media/{{project.image.url}} 1x, {% get_media_prefix %}media/{{project.image.url}} 2x"
-                                             alt="">
+                    </p>
+                    <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                        {%for project in object_list%}
+                        <li class="folio-list__item column" data-animate-el>
+                            <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
+                                <div class="folio-list__item-pic">
+                                    <img src="{% get_media_prefix %}media/{{project.image.url}}"
+                                         srcset="{% get_media_prefix %}media/{{project.image.url}} 1x, {% get_media_prefix %}media/{{project.image.url}} 2x"
+                                         alt="">
+                                </div>
+                                <div class="folio-list__item-text">
+                                    <div class="folio-list__item-cat">
+                                        {{project.is_it}}
                                     </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            {{project.is_it}}
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            {{project.title}}
-                                        </div>
+                                    <div class="folio-list__item-title">
+                                        {{project.title}}
                                     </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="{{project.link}}" title="project link">
+                                </div>
+                            </a>
+                            <a class="folio-list__proj-link" href="{{project.link}}" title="project link">
 
-                                </a>
-                            </li> <!--end folio-list__item -->
-                              {%endfor%}
+                            </a>
+                        </li> <!--end folio-list__item -->
+                          {%endfor%}
 
 
-                        </ul> <!-- end folio-list -->
+                    </ul> <!-- end folio-list -->
 
-                    </div> <!-- end column -->
-                    <!-- Modal Templates Popup
-                    -------------------------------------------- -->
-                    {%for project in object_list%}
-                    <div id="modal-0{{ forloop.counter }}" hidden>
-                        <div class="modal-popup">
-                            <img src="{% get_media_prefix %}media/{{project.image.url}}" alt="">
+                </div> <!-- end column -->
+                <!-- Modal Templates Popup
+                -------------------------------------------- -->
+                {%for project in object_list%}
+                <div id="modal-0{{ forloop.counter }}" hidden>
+                    <div class="modal-popup">
+                        <img src="{% get_media_prefix %}media/{{project.image.url}}" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>{{ project.title }}</h5>
-                                <p>{% trans "What I used: " %} {{ project.description|linebreaks }}</p>
+                        <div class="modal-popup__desc">
+                            <h5>{{ project.title }}</h5>
+                            <p>{% trans "What I used: " %} {{ project.description|linebreaks }}</p>
 
-                            </div>
-                            {% if project.is_link%}
-                            <a href="{{project.link}}" class="modal-popup__details">Project link</a>
-                            {%endif%}
                         </div>
+                        {% if project.is_link%}
+                        <a href="{{project.link}}" class="modal-popup__details">Project link</a>
+                        {%endif%}
                     </div>
-                  {%endfor%}
-
                 </div>
-            </section>
+              {%endfor%}
+
+            </div>
+        </section>
 {%endblock%}
 
+{% include 'portfolio/includes/footer.html' %}
 
-            {% include 'portfolio/includes/footer.html' %}
-
+</main>
     <!-- Java Script
     ================================================== -->
     <script src="{%static 'js/plugins.js'%}"></script>

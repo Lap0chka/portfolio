@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 21:11+0100\n"
+"POT-Creation-Date: 2024-12-18 16:12+0100\n"
 "PO-Revision-Date: 2024-12-12 20:17+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,19 +22,31 @@ msgstr ""
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
+#: blog/templates/blog/detail.html:12
+msgid "Back"
+msgstr "Назад"
+
 #: blog/templates/blog/detail.html:28
+msgid "Date"
+msgstr "Дата"
+
+#: blog/templates/blog/detail.html:33
+msgid "Views"
+msgstr "Перегляди"
+
+#: blog/templates/blog/detail.html:41
 msgid "Leave your comment here"
 msgstr "Залиште свій коментар тут"
 
-#: blog/templates/blog/detail.html:36
+#: blog/templates/blog/detail.html:49
 msgid "Your name"
 msgstr "Ваше ім'я"
 
-#: blog/templates/blog/detail.html:40
+#: blog/templates/blog/detail.html:53
 msgid "Your review"
 msgstr "Ваш відгук"
 
-#: blog/templates/blog/detail.html:46
+#: blog/templates/blog/detail.html:59
 msgid "Submit"
 msgstr "Надіслати"
 
@@ -314,7 +326,9 @@ msgstr "Зв’яжіться зі мною"
 
 #: portfolio/templates/portfolio/includes/footer.html:12
 msgid "If you need a website or want to hire me, feel free to reach out!"
-msgstr "Потрібен сайт? Звертайтеся! Бажаєте просто поспілкуватися? Пишіть, буду радий!"
+msgstr ""
+"Потрібен сайт? Звертайтеся! Бажаєте просто поспілкуватися? Пишіть, буду "
+"радий!"
 
 #: portfolio/templates/portfolio/includes/footer.html:20
 msgid "Reach me at"
@@ -324,7 +338,11 @@ msgstr "Напишіть мені"
 msgid "Social"
 msgstr "Соціальні мережі"
 
-#: portfolio/templates/portfolio/includes/footer.html:43
+#: portfolio/templates/portfolio/includes/footer.html:37
+msgid "SayHello"
+msgstr "Зв’язатися"
+
+#: portfolio/templates/portfolio/includes/footer.html:44
 msgid "Site Language"
 msgstr "Мова сайту"
 

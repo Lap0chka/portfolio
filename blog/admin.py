@@ -5,16 +5,40 @@ from blog.models import Blog, Suggest, Comment
 
 @admin.register(Blog)
 class BlogAdmin(TranslatableAdmin):
-    list_display = ('title', 'slug','created_at')
+    """
+    Admin class for the Blog model with translation support.
+    """
+    list_display = ('title', 'slug', 'created_at', 'is_published', 'views')
+    list_filter = ('is_published', 'created_at')
+    search_fields = ('translations__title', 'translations__slug')
+    readonly_fields = ('views', 'created_at')
+    ordering = ('-created_at',)
 
     def get_prepopulated_fields(self, request, obj=None):
+        """
+        Automatically populate the slug field based on the title.
+        """
         return {'slug': ('title',)}
+
 
 @admin.register(Suggest)
 class SuggestAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description')
+    """
+    Admin class for the Suggest model.
+    """
+    list_display = ('title', 'description', 'link')
+    search_fields = ('title', 'description')
+    list_filter = ('title',)
+    ordering = ('title',)
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('username', 'post')
+    """
+    Admin class for the Comment model.
+    """
+    list_display = ('username', 'post', 'created_at')
+    list_filter = ('created_at', 'post')
+    search_fields = ('username', 'body', 'post__translations__title')
+    readonly_fields = ('created_at', 'user_id')
+    ordering = ('-created_at',)
