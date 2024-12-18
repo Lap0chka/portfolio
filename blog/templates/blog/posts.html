@@ -4,12 +4,33 @@
 {%block title%}My_blog{%endblock%}
 
 {%block menu%}
-    <li><a href="{% url 'portfolio' %}" style="color: orange;font-size: 13px; font-weight: bold;">Intro</a></li>
-<li><a href="#" style="font-weight: bold;" class="smoothscroll">Order by views</a></li>
-<li><a href="#suggest" class="smoothscroll">Suggest news</a></li>
-<li>
-    <a href="#contact" class="smoothscroll">{% trans "Say Hello" %}</a>
-</li>
+<div class="header-mobile">
+    <span class="mobile-home-link"><a href="{% url 'portfolio' %}">{% trans "Hello" %}</a></span>
+    <a class="mobile-menu-toggle" href="{% url 'portfolio' %}"><span>{% trans "Intro" %}</span></a>
+    {% if 'by_views' in request.path %}
+    <a class="mobile-menu-toggle" href="{% url 'blog' %}"><span>{% trans "Order by new" %}</span></a>
+    {%else%}
+    <a class="mobile-menu-toggle" href="{% url 'order_by_views' %}"><span>{% trans "Order by views" %}</span></a>
+    {%endif%}
+    <a class="mobile-menu-toggle" href="#suggest"><span>{% trans "Suggest news" %}</span></a>
+    <a class="mobile-menu-toggle" href="#contact"><span>{% trans "Say Hello" %}</span></a>
+</div>
+<div class="row wide main-nav-wrap">
+    <nav class="column lg-12 main-nav">
+        <ul>
+            <li><a href="{% url 'portfolio' %}" style="color: orange;font-size: 13px; font-weight: bold;">{% trans "Intro" %}</a></li>
+            {% if 'by_views' in request.path %}
+            <li><a href="{% url 'blog' %}" style="font-weight: bold;">{% trans "Order by new" %}</a></li>
+            {% else %}
+            <li><a href="{% url 'order_by_views' %}" style="font-weight: bold;">{% trans "Order by views" %}</a></li>
+            {% endif %}
+            <li><a href="#suggest" class="smoothscroll">{% trans "Suggest news" %}</a></li>
+            <li>
+                <a href="#contact" class="smoothscroll">{% trans "Say Hello" %}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 {%endblock%}
 
 {%block context%}
@@ -20,13 +41,10 @@
     ================================================== -->
     <section id="intro" class="s-intro target-section">
       <div class="row contact-top">
-        {% if messages %}
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-    {% endif %}
-            <div class="column lg-12" data-animate-block>
+
+          <div class="column lg-12" data-animate-block>
                         <h2 class="text-pretitle" data-animate-el>
+                            {% include 'portfolio/includes/messages.html' %}
                             {% trans "Articles" %}
                         </h2>
                         <p class="h1" data-animate-el>
@@ -68,7 +86,7 @@
                         </ul>
                 </div>
             {%endif%}
-                        </div> <!-- end column -->
+          </div> <!-- end column -->
                         <!-- Modal Templates Popup
                         -------------------------------------------- -->
                         {%for post in posts%}
@@ -82,8 +100,9 @@
                                         <p>{{post.views}} view{{views|pluralize}}</p>
                                     </div>
 
-                                    <a href="{{post.get_absolute_url}}" class="modal-popup__details">{% trans
-                                        "Read"%}</a>
+                                    <a href="{{post.get_absolute_url}}" class="modal-popup__details">
+                                        {% trans "Read"%}
+                                    </a>
                                 </div>
                             </div> <!-- end modal -->
                         {%endfor%}

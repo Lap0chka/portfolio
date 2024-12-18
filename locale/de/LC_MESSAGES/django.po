@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 16:12+0100\n"
+"POT-Creation-Date: 2024-12-18 18:25+0100\n"
 "PO-Revision-Date: 2024-12-12 19:35+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,35 +19,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: blog/templates/blog/detail.html:12
+#: blog/templates/blog/detail.html:7 blog/templates/blog/detail.html:13
 msgid "Back"
 msgstr "Zurück"
 
-#: blog/templates/blog/detail.html:28
+#: blog/templates/blog/detail.html:33
 msgid "Date"
 msgstr "Datum"
 
-#: blog/templates/blog/detail.html:33
+#: blog/templates/blog/detail.html:38
 msgid "Views"
 msgstr "Aufrufe"
 
-#: blog/templates/blog/detail.html:41
+#: blog/templates/blog/detail.html:46
 msgid "Leave your comment here"
 msgstr "Hinterlassen Sie hier Ihren Kommentar"
 
-#: blog/templates/blog/detail.html:49
+#: blog/templates/blog/detail.html:54
 msgid "Your name"
 msgstr "Ihr Name"
 
-#: blog/templates/blog/detail.html:53
+#: blog/templates/blog/detail.html:58
 msgid "Your review"
 msgstr "Ihre Bewertung"
 
-#: blog/templates/blog/detail.html:59
+#: blog/templates/blog/detail.html:63
 msgid "Submit"
 msgstr "Absenden"
 
-#: blog/templates/blog/modal_suggest.html:12
+#: blog/templates/blog/modal_suggest.html:12 blog/templates/blog/posts.html:15
+#: blog/templates/blog/posts.html:27
 msgid "Suggest news"
 msgstr "Nachricht vorschlagen"
 
@@ -63,19 +64,41 @@ msgstr "Beschreibung"
 msgid "Link to article (source)"
 msgstr "Link zum Artikel (Quelle)"
 
-#: blog/templates/blog/posts.html:11 portfolio/templates/portfolio/base.html:66
+#: blog/templates/blog/posts.html:8 portfolio/templates/portfolio/base.html:48
+msgid "Hello"
+msgstr "Hallo"
+
+#: blog/templates/blog/posts.html:9 blog/templates/blog/posts.html:21
+#: portfolio/templates/portfolio/base.html:57
+msgid "Intro"
+msgstr "Einleitung"
+
+#: blog/templates/blog/posts.html:11 blog/templates/blog/posts.html:23
+msgid "Order by new"
+msgstr "Nach Neueste"
+
+#: blog/templates/blog/posts.html:13 blog/templates/blog/posts.html:25
+msgid "Order by views"
+msgstr "Nach Ansichten"
+
+#: blog/templates/blog/posts.html:16 blog/templates/blog/posts.html:29
+#: portfolio/templates/portfolio/base.html:66
 msgid "Say Hello"
 msgstr "Sag Hallo"
 
-#: blog/templates/blog/posts.html:30
+#: blog/templates/blog/posts.html:48
 msgid "Articles"
 msgstr "Artikel"
 
-#: blog/templates/blog/posts.html:33
+#: blog/templates/blog/posts.html:51
 msgid "Sometimes I will add interesting information here."
 msgstr "Manchmal werde ich hier interessante Informationen hinzufügen."
 
-#: blog/templates/blog/posts.html:97
+#: blog/templates/blog/posts.html:104
+msgid "Read"
+msgstr "Lesen"
+
+#: blog/templates/blog/posts.html:116
 msgid ""
 "I enjoy receiving messages from you. If you have any suggestions, I'll be "
 "here."
@@ -103,17 +126,9 @@ msgstr "Russisch"
 msgid "Welcome"
 msgstr "Willkommen"
 
-#: portfolio/templates/portfolio/base.html:48
-msgid "Hello"
-msgstr "Hallo"
-
 #: portfolio/templates/portfolio/base.html:49
 msgid "Menu"
 msgstr "Menu"
-
-#: portfolio/templates/portfolio/base.html:57
-msgid "Intro"
-msgstr "Einleitung"
 
 #: portfolio/templates/portfolio/base.html:60
 msgid "About"
@@ -331,6 +346,3 @@ msgstr "SagHallo"
 #: portfolio/templates/portfolio/includes/footer.html:44
 msgid "Site Language"
 msgstr "Seitensprache"
-
-#~ msgid "Read"
-#~ msgstr "Lesen"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 16:12+0100\n"
+"POT-Creation-Date: 2024-12-18 18:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/templates/blog/detail.html:12
+#: blog/templates/blog/detail.html:7 blog/templates/blog/detail.html:13
 msgid "Back"
 msgstr ""
 
-#: blog/templates/blog/detail.html:28
+#: blog/templates/blog/detail.html:33
 msgid "Date"
 msgstr ""
 
-#: blog/templates/blog/detail.html:33
+#: blog/templates/blog/detail.html:38
 msgid "Views"
 msgstr ""
 
-#: blog/templates/blog/detail.html:41
+#: blog/templates/blog/detail.html:46
 msgid "Leave your comment here"
 msgstr ""
 
-#: blog/templates/blog/detail.html:49
+#: blog/templates/blog/detail.html:54
 msgid "Your name"
 msgstr ""
 
-#: blog/templates/blog/detail.html:53
+#: blog/templates/blog/detail.html:58
 msgid "Your review"
 msgstr ""
 
-#: blog/templates/blog/detail.html:59
+#: blog/templates/blog/detail.html:63
 msgid "Submit"
 msgstr ""
 
-#: blog/templates/blog/modal_suggest.html:12
+#: blog/templates/blog/modal_suggest.html:12 blog/templates/blog/posts.html:15
+#: blog/templates/blog/posts.html:27
 msgid "Suggest news"
 msgstr ""
 
@@ -62,19 +63,41 @@ msgstr ""
 msgid "Link to article (source)"
 msgstr ""
 
-#: blog/templates/blog/posts.html:11 portfolio/templates/portfolio/base.html:66
+#: blog/templates/blog/posts.html:8 portfolio/templates/portfolio/base.html:48
+msgid "Hello"
+msgstr ""
+
+#: blog/templates/blog/posts.html:9 blog/templates/blog/posts.html:21
+#: portfolio/templates/portfolio/base.html:57
+msgid "Intro"
+msgstr ""
+
+#: blog/templates/blog/posts.html:11 blog/templates/blog/posts.html:23
+msgid "Order by new"
+msgstr ""
+
+#: blog/templates/blog/posts.html:13 blog/templates/blog/posts.html:25
+msgid "Order by views"
+msgstr ""
+
+#: blog/templates/blog/posts.html:16 blog/templates/blog/posts.html:29
+#: portfolio/templates/portfolio/base.html:66
 msgid "Say Hello"
 msgstr ""
 
-#: blog/templates/blog/posts.html:30
+#: blog/templates/blog/posts.html:48
 msgid "Articles"
 msgstr ""
 
-#: blog/templates/blog/posts.html:33
+#: blog/templates/blog/posts.html:51
 msgid "Sometimes I will add interesting information here."
 msgstr ""
 
-#: blog/templates/blog/posts.html:97
+#: blog/templates/blog/posts.html:104
+msgid "Read"
+msgstr ""
+
+#: blog/templates/blog/posts.html:116
 msgid ""
 "I enjoy receiving messages from you. If you have any suggestions, I'll be "
 "here."
@@ -100,16 +123,8 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: portfolio/templates/portfolio/base.html:48
-msgid "Hello"
-msgstr ""
-
 #: portfolio/templates/portfolio/base.html:49
 msgid "Menu"
-msgstr ""
-
-#: portfolio/templates/portfolio/base.html:57
-msgid "Intro"
 msgstr ""
 
 #: portfolio/templates/portfolio/base.html:60

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 16:12+0100\n"
+"POT-Creation-Date: 2024-12-18 18:25+0100\n"
 "PO-Revision-Date: 2024-12-12 20:17+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,35 +22,36 @@ msgstr ""
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: blog/templates/blog/detail.html:12
+#: blog/templates/blog/detail.html:7 blog/templates/blog/detail.html:13
 msgid "Back"
 msgstr "Назад"
 
-#: blog/templates/blog/detail.html:28
+#: blog/templates/blog/detail.html:33
 msgid "Date"
 msgstr "Дата"
 
-#: blog/templates/blog/detail.html:33
+#: blog/templates/blog/detail.html:38
 msgid "Views"
 msgstr "Перегляди"
 
-#: blog/templates/blog/detail.html:41
+#: blog/templates/blog/detail.html:46
 msgid "Leave your comment here"
 msgstr "Залиште свій коментар тут"
 
-#: blog/templates/blog/detail.html:49
+#: blog/templates/blog/detail.html:54
 msgid "Your name"
 msgstr "Ваше ім'я"
 
-#: blog/templates/blog/detail.html:53
+#: blog/templates/blog/detail.html:58
 msgid "Your review"
 msgstr "Ваш відгук"
 
-#: blog/templates/blog/detail.html:59
+#: blog/templates/blog/detail.html:63
 msgid "Submit"
 msgstr "Надіслати"
 
-#: blog/templates/blog/modal_suggest.html:12
+#: blog/templates/blog/modal_suggest.html:12 blog/templates/blog/posts.html:15
+#: blog/templates/blog/posts.html:27
 msgid "Suggest news"
 msgstr "Запропонувати новину"
 
@@ -66,19 +67,41 @@ msgstr "Опис"
 msgid "Link to article (source)"
 msgstr "Посилання на статтю (джерело)"
 
-#: blog/templates/blog/posts.html:11 portfolio/templates/portfolio/base.html:66
+#: blog/templates/blog/posts.html:8 portfolio/templates/portfolio/base.html:48
+msgid "Hello"
+msgstr "Привіт"
+
+#: blog/templates/blog/posts.html:9 blog/templates/blog/posts.html:21
+#: portfolio/templates/portfolio/base.html:57
+msgid "Intro"
+msgstr "Головна"
+
+#: blog/templates/blog/posts.html:11 blog/templates/blog/posts.html:23
+msgid "Order by new"
+msgstr "Сортувати за новими"
+
+#: blog/templates/blog/posts.html:13 blog/templates/blog/posts.html:25
+msgid "Order by views"
+msgstr "Сортувати за переглядами"
+
+#: blog/templates/blog/posts.html:16 blog/templates/blog/posts.html:29
+#: portfolio/templates/portfolio/base.html:66
 msgid "Say Hello"
 msgstr "Зв’язатися"
 
-#: blog/templates/blog/posts.html:30
+#: blog/templates/blog/posts.html:48
 msgid "Articles"
 msgstr "Статті"
 
-#: blog/templates/blog/posts.html:33
+#: blog/templates/blog/posts.html:51
 msgid "Sometimes I will add interesting information here."
 msgstr "Іноді я буду додавати цікаву інформацію тут."
 
-#: blog/templates/blog/posts.html:97
+#: blog/templates/blog/posts.html:104
+msgid "Read"
+msgstr "Читати"
+
+#: blog/templates/blog/posts.html:116
 msgid ""
 "I enjoy receiving messages from you. If you have any suggestions, I'll be "
 "here."
@@ -105,17 +128,9 @@ msgstr "Російська"
 msgid "Welcome"
 msgstr "Ласкаво просимо"
 
-#: portfolio/templates/portfolio/base.html:48
-msgid "Hello"
-msgstr "Привіт"
-
 #: portfolio/templates/portfolio/base.html:49
 msgid "Menu"
 msgstr "Меню"
-
-#: portfolio/templates/portfolio/base.html:57
-msgid "Intro"
-msgstr "Вступ"
 
 #: portfolio/templates/portfolio/base.html:60
 msgid "About"
@@ -345,6 +360,3 @@ msgstr "Зв’язатися"
 #: portfolio/templates/portfolio/includes/footer.html:44
 msgid "Site Language"
 msgstr "Мова сайту"
-
-#~ msgid "Read"
-#~ msgstr "Читати"

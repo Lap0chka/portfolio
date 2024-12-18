@@ -106,6 +106,7 @@ class Suggest(models.Model):
     title = models.CharField(max_length=128)
     description = models.CharField(max_length=256)
     link = models.URLField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         """
