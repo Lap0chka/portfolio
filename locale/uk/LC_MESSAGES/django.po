@@ -150,7 +150,7 @@ msgstr "Я бекенд-розробник"
 
 #: portfolio/templates/portfolio/base.html:94
 msgid "Daniil Tkachenko"
-msgstr "Данiïло Ткаченко"
+msgstr "Данiïл Ткаченко"
 
 #: portfolio/templates/portfolio/base.html:96
 msgid "Why me"

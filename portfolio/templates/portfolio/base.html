@@ -262,7 +262,7 @@
 
                     </p>
                     <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                        {%for project in object_list%}
+                        {%for project in portfolios%}
                         <li class="folio-list__item column" data-animate-el>
                             <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                 <div class="folio-list__item-pic">
@@ -291,14 +291,17 @@
                 </div> <!-- end column -->
                 <!-- Modal Templates Popup
                 -------------------------------------------- -->
-                {%for project in object_list%}
+                {%for project in portfolios%}
                 <div id="modal-0{{ forloop.counter }}" hidden>
                     <div class="modal-popup">
                         <img src="{% get_media_prefix %}media/{{project.image.url}}" alt="">
 
                         <div class="modal-popup__desc">
                             <h5>{{ project.title }}</h5>
-                            <p>{% trans "What I used: " %} {{ project.description|linebreaks }}</p>
+                            <p>{% trans "Description: " %} {{ project.description }}
+                                <br>{% trans "What tools I used: " %} {{ project.tools }}
+                            </p>
+
 
                         </div>
                         {% if project.is_link%}

@@ -12,7 +12,7 @@ urlpatterns = [
 
               ] + i18n_patterns(
     path("i18n/", include("django.conf.urls.i18n")),
-    path("", views.BaseTemplateView.as_view(), name='portfolio'),
+    path("", views.base_view, name='portfolio'),
     path("blog/", include('blog.urls',)),
 )
 

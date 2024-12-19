@@ -40,20 +40,6 @@ class MyBlogListView(ListView):
     success_url = reverse_lazy('blog')
     form_class = SuggestionForm
 
-    def get_queryset(self) -> Any:
-        """
-        Retrieve the queryset of blog posts, ordered by views or creation date.
-
-        Returns:
-            QuerySet: The ordered queryset of blog posts.
-        """
-        queryset = super().get_queryset()
-        if 'by_views' in self.request.path:
-            logger.info('Sorting posts by views.')
-            return queryset.order_by('-views')
-        logger.info('Sorting posts by creation date.')
-        return queryset.order_by('-created_at')
-
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """
         Add the suggestion form to the context.
@@ -68,7 +54,22 @@ class MyBlogListView(ListView):
         context['form'] = self.form_class()
         return context
 
-    def post(self, request: HttpRequest) -> HttpResponse:
+    def get_queryset(self) -> Any:
+        """
+        Retrieve the queryset of blog posts, ordered by views or creation date.
+
+        Returns:
+            QuerySet: The ordered queryset of blog posts.
+        """
+        queryset = super().get_queryset()
+        if 'by_views' in self.request.path:
+            logger.info('Sorting posts by views.')
+            return queryset.order_by('-views')
+        logger.info('Sorting posts by creation date.')
+        return queryset.order_by('-created_at')
+
+
+    def post(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
         """
         Handle the submission of the suggestion form.
 
@@ -103,7 +104,7 @@ class MyBlogListView(ListView):
                 return redirect(self.success_url)
 
         logger.info('Suggestion form is invalid. Rendering form with errors.')
-        return self.render_to_response(self.get_context_data(form=form))
+        return HttpResponseRedirect(self.success_url)
 
 
 
@@ -170,7 +171,7 @@ class DetailPageView(DetailView):
         logger.info(f"Post '{post.title}' was viewed. Total views: {post.views}")
         return super().get(request, *args, **kwargs)
 
-    def post(self, request: HttpRequest) -> HttpResponse:
+    def post(self, request: HttpRequest, *args, **kwargs) -> HttpResponse:
         """
         Handle the submission of a new comment.
 
@@ -216,4 +217,4 @@ class DetailPageView(DetailView):
             messages.error(request, error)
             logger.error(f"Form submission error: {error}")
 
-        return self.render_to_response(self.get_context_data(form=form))
+        return redirect(post.get_absolute_url())

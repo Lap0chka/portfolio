@@ -5,12 +5,8 @@
         <span aria-hidden="true">&times;</span>
     </button>
     <strong>
-        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-         {{ message }}
+       {{ message }}
     </strong>
-    {% else %}
-    {{ message }}
-    {% endif %}
 </div>
 {% endfor %}
 {% endif %}

@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 
 class Portfolio(models.Model):
@@ -12,6 +11,12 @@ class Portfolio(models.Model):
         help_text="Title of the portfolio item."
     )
 
+    description = models.TextField(
+        help_text="Detailed description of the portfolio item, including tools and techniques used."
+    )
+
+    tools = models.TextField(blank=True, null=True)
+
     is_it = models.CharField(
         max_length=64,
         null=True,
@@ -19,12 +24,12 @@ class Portfolio(models.Model):
         default="",
         help_text="A brief categorization or type of the portfolio item."
     )
-    description = models.TextField(
-        help_text="Detailed description of the portfolio item, including tools and techniques used."
-    )
+
     image = models.ImageField(
         upload_to='portfolio/media',
-        help_text="Upload an image representing the portfolio item."
+        help_text="Upload an image representing the portfolio item.",
+        blank=True,
+        null=True
     )
     link = models.URLField(
         blank=True,
