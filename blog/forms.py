@@ -1,6 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from blog.models import Suggest, Comment
+
+from blog.models import Comment, Suggest
 from blog.utills import check_swearing
 
 
@@ -12,32 +13,38 @@ class SuggestionForm(forms.ModelForm):
     title = forms.CharField(
         max_length=128,
         min_length=2,
-        widget=forms.TextInput(attrs={
-            'class': 'u-fullwidth',
-            'placeholder': 'Enter Title',
-        })
+        widget=forms.TextInput(
+            attrs={
+                "class": "u-fullwidth",
+                "placeholder": "Enter Title",
+            }
+        ),
     )
 
     description = forms.CharField(
         max_length=256,
-        widget=forms.TextInput(attrs={
-            'class': 'u-fullwidth',
-            'placeholder': 'Enter Description',
-        })
+        widget=forms.TextInput(
+            attrs={
+                "class": "u-fullwidth",
+                "placeholder": "Enter Description",
+            }
+        ),
     )
 
     link = forms.URLField(
         max_length=256,
         required=False,
-        widget=forms.URLInput(attrs={
-            'class': 'u-fullwidth',
-            'placeholder': 'Enter URL',
-        })
+        widget=forms.URLInput(
+            attrs={
+                "class": "u-fullwidth",
+                "placeholder": "Enter URL",
+            }
+        ),
     )
 
     class Meta:
         model = Suggest
-        fields = '__all__'
+        fields = "__all__"
 
 
 class CommentForm(forms.ModelForm):
@@ -52,24 +59,28 @@ class CommentForm(forms.ModelForm):
     username = forms.CharField(
         max_length=128,
         min_length=2,
-        widget=forms.TextInput(attrs={
-            'class': 'u-fullwidth',
-            'placeholder': 'John Smith',
-        })
+        widget=forms.TextInput(
+            attrs={
+                "class": "u-fullwidth",
+                "placeholder": "John Smith",
+            }
+        ),
     )
 
     body = forms.CharField(
         max_length=1024,
-        widget=forms.Textarea(attrs={
-            'class': 'u-fullwidth',
-            'placeholder': 'I think it is a great post!',
-            'rows': 6,
-        })
+        widget=forms.Textarea(
+            attrs={
+                "class": "u-fullwidth",
+                "placeholder": "I think it is a great post!",
+                "rows": 6,
+            }
+        ),
     )
 
     class Meta:
         model = Comment
-        fields = ('username', 'body')
+        fields = ("username", "body")
 
     def clean_username(self) -> str:
         """
@@ -81,7 +92,7 @@ class CommentForm(forms.ModelForm):
         Raises:
             ValidationError: If profanity is detected in the username.
         """
-        username = self.cleaned_data.get('username', '').strip()
+        username = self.cleaned_data.get("username", "").strip()
         if check_swearing(username):
             raise ValidationError("You cannot use swearing words in the username.")
         return username
@@ -96,8 +107,7 @@ class CommentForm(forms.ModelForm):
         Raises:
             ValidationError: If profanity is detected in the body.
         """
-        body = self.cleaned_data.get('body', '').strip()
+        body = self.cleaned_data.get("body", "").strip()
         if check_swearing(body):
             raise ValidationError("You cannot use swearing words in the body.")
         return body
-

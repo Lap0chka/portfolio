@@ -249,3 +249,5 @@ media/
 *.pid
 migrations/
 .migrations
+
+logs/

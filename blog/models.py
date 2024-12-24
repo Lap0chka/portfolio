@@ -2,13 +2,13 @@ from typing import Any
 
 from django.db import models
 from django.urls import reverse
-from django.utils.text import slugify
+from django.utils import timezone
+from parler.managers import TranslatableManager
 from parler.models import TranslatableModel, TranslatedFields
 from pytils.translit import slugify
-from django.utils import timezone
 
 
-class BlogManager(models.Manager):
+class BlogManager(TranslatableManager):
     """
     Custom manager for the Blog model to retrieve only published blog posts.
     """
@@ -39,22 +39,19 @@ class Blog(TranslatableModel):
         title=models.CharField(max_length=128),
         slug=models.SlugField(max_length=128, blank=True),
         description=models.CharField(max_length=256),
-        article=models.TextField(default="")
+        article=models.TextField(default=""),
     )
-    created_at = models.DateTimeField(auto_now_add=True)
     picture = models.ImageField(
-        upload_to='blog',
-        null=True,
-        blank=True,
-        default='blog/default.png'
+        upload_to="blog", null=True, blank=True, default="blog/default.png"
     )
-    is_published = models.BooleanField(default=True)
-    views = models.PositiveIntegerField(default=0)
+    created_at: models.DateTimeField = models.DateTimeField(auto_now_add=True)
+    is_published: models.BooleanField = models.BooleanField(default=True)
+    views: models.PositiveIntegerField = models.PositiveIntegerField(default=0)
 
     # Custom manager to retrieve only published posts
     published = BlogManager()
-    # Default manager
-    objects = models.Manager()
+    # Translatable manager
+    objects = TranslatableManager()
 
     def __str__(self) -> str:
         """
@@ -72,7 +69,7 @@ class Blog(TranslatableModel):
         Returns:
             str: The URL to the detail view of the blog post.
         """
-        return reverse('detail', args=[self.slug])
+        return reverse("detail", args=[self.slug])
 
     def save(self, *args: Any, **kwargs: Any) -> None:
         """
@@ -82,15 +79,19 @@ class Blog(TranslatableModel):
             *args (Any): Positional arguments.
             **kwargs (Any): Keyword arguments.
         """
-        if not self.slug:
-            self.slug = slugify(self.title)
+        # Use safe_translation_getter to get the translated field value
+        current_slug = self.safe_translation_getter("slug", default=None)
+        if not current_slug:
+            title = self.safe_translation_getter("title", default="")
+            self.slug = slugify(title)
         super().save(*args, **kwargs)
 
     class Meta:
         """
         Meta options for the Blog model.
         """
-        ordering = ['-created_at']
+
+        ordering = ["-created_at"]
 
 
 class Suggest(models.Model):
@@ -130,7 +131,7 @@ class Comment(models.Model):
         user_id (str): A unique identifier for the user.
     """
 
-    post = models.ForeignKey('Blog', on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey("Blog", on_delete=models.CASCADE, related_name="comments")
     username = models.CharField(max_length=128)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -143,11 +144,8 @@ class Comment(models.Model):
         Returns:
             str: The username and the creation date of the comment.
         """
-        return f"{self.username} - {timezone.localtime(self.created_at).strftime('%Y-%m-%d %H:%M:%S')}"
 
-
-
-
-
-
-
+        return (
+            f"{self.username} - "
+            f"{timezone.localtime(self.created_at).strftime('%Y-%m-%d %H:%M:%S')}"
+        )

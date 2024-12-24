@@ -32,7 +32,7 @@ def send_custom_email(subject: str, message: str) -> None:
         Exception: If the email fails to send.
     """
     from_email: str = settings.DEFAULT_FROM_EMAIL
-    recipient_list: list[str] = ['danya.tkachenko.1997@gmail.com']
+    recipient_list: list[str] = ["danya.tkachenko.1997@gmail.com"]
 
     try:
         send_mail(

@@ -1,0 +1,63 @@
+{%load static%}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+
+    <title>{%block title%}{% trans "Welcome" %}{%endblock%}</title>
+
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+</head>
+
+<body id="top">
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+        <header class="s-header">
+            {%block menu%}
+
+            {%endblock%}
+        </header> <!-- end s-header -->
+
+{%block context%}
+        <!-- ## main content
+        ==================================================- -->
+
+{%endblock%}
+{% include 'includes/footer.html' %}
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{%static 'js/plugins.js'%}"></script>
+    <script src="{%static 'js/main.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-{%extends 'portfolio/base.html' %}
+{%extends 'base.html' %}
 {% load i18n %}
 {%load static%}
 {%block title %}{{object.title}}{% endblock %}
@@ -21,7 +21,7 @@
 {%block context%}
     <div class="column-center" style=>
         <h3 class="text-title" style="text-align:center">
-            {% include 'portfolio/includes/messages.html' %}
+            {% include 'includes/messages.html' %}
             <br>{{object.title}}
         </h3>
         <p class="text-title" style="margin-left:15%;margin-right:15%;text-align:justify">

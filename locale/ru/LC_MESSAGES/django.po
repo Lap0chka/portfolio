@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 18:25+0100\n"
+"POT-Creation-Date: 2024-12-19 17:11+0100\n"
 "PO-Revision-Date: 2024-12-12 19:28+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,7 @@ msgid "Title"
 msgstr "Заголовок"
 
 #: blog/templates/blog/modal_suggest.html:22
+#: portfolio/templates/portfolio/base.html:301
 msgid "Description"
 msgstr "Описание"
 
@@ -107,19 +108,19 @@ msgid ""
 msgstr ""
 "Мне приятно получать ваши сообщения. Если у вас есть предложения, я здесь."
 
-#: my_portfolio/settings.py:119
+#: my_portfolio/settings.py:120
 msgid "German"
 msgstr "Немецкий"
 
-#: my_portfolio/settings.py:120
+#: my_portfolio/settings.py:121
 msgid "English"
 msgstr "Английский"
 
-#: my_portfolio/settings.py:121
+#: my_portfolio/settings.py:122
 msgid "Українська"
 msgstr "Украинский"
 
-#: my_portfolio/settings.py:122
+#: my_portfolio/settings.py:123
 msgid "Russian"
 msgstr "Русский"
 
@@ -330,9 +331,9 @@ msgstr "Последние работы"
 msgid "Here are some of my projects. Feel free to check them out."
 msgstr "Вот некоторые из моих проектов."
 
-#: portfolio/templates/portfolio/base.html:301
-msgid "What I used: "
-msgstr "Что я использовал: "
+#: portfolio/templates/portfolio/base.html:302
+msgid "What tools I used"
+msgstr "Какие интсрументы я использовал: "
 
 #: portfolio/templates/portfolio/includes/footer.html:8
 msgid "Get In Touch"
