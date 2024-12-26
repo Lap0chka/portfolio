@@ -23,7 +23,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["danbka.pythonanywhere.com"]
 
 
 # Application definition

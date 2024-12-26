@@ -13,4 +13,3 @@ class PortfolioAdmin(TranslatableAdmin):
     list_display = ("title", "is_it", "link")
     search_fields = ("title", "translations__description")
     list_filter = ("is_it",)
-    readonly_fields = ("link",)

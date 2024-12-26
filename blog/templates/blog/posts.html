@@ -56,8 +56,8 @@
                                     <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                                         <div class="folio-list__item-pic">
                                             {%if post.picture%}
-                                            <img src="{{post.picture.url}}"
-                                                 srcset="{{post.picture.url}} 2x" alt="">
+                                            <img src="https://danbka.pythonanywhere.com/media{{post.picture.url}}"
+                                                 srcset="https://danbka.pythonanywhere.com/media{{post.picture.url}} 2x" alt="">
                                             {%endif%}
                                         </div>
 

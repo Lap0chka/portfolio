@@ -221,8 +221,8 @@
                     <li class="folio-list__item column" data-animate-el>
                         <a class="folio-list__item-link" href="#modal-0{{ forloop.counter }}">
                             <div class="folio-list__item-pic">
-                                <img src="{{project.image.url}}"
-                                     srcset="{{project.image.url}} 1x, {{project.image.url}} 2x"
+                                <img src="https://danbka.pythonanywhere.com/media{{project.image.url}}"
+                                     srcset="https://danbka.pythonanywhere.com/media{{project.image.url}} 1x, https://danbka.pythonanywhere.com/media{{project.image.url}} 2x"
                                      alt="">
                             </div>
                             <div class="folio-list__item-text">
@@ -249,7 +249,7 @@
             {%for project in portfolios%}
             <div id="modal-0{{ forloop.counter }}" hidden>
                 <div class="modal-popup">
-                    <img src="{{project.image.url}}" alt="">
+                    <img src="https://danbka.pythonanywhere.com/media{{project.image.url}}" alt="">
 
                     <div class="modal-popup__desc">
                         <h5>{{ project.title }}</h5>

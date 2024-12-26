@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-19 17:11+0100\n"
+"POT-Creation-Date: 2024-12-26 22:00+0000\n"
 "PO-Revision-Date: 2024-12-12 19:35+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,7 +57,7 @@ msgid "Title"
 msgstr "Titel"
 
 #: blog/templates/blog/modal_suggest.html:22
-#: portfolio/templates/portfolio/base.html:301
+#: portfolio/templates/portfolio/index.html:256
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -65,12 +65,12 @@ msgstr "Beschreibung"
 msgid "Link to article (source)"
 msgstr "Link zum Artikel (Quelle)"
 
-#: blog/templates/blog/posts.html:8 portfolio/templates/portfolio/base.html:48
+#: blog/templates/blog/posts.html:8 portfolio/templates/portfolio/index.html:7
 msgid "Hello"
 msgstr "Hallo"
 
 #: blog/templates/blog/posts.html:9 blog/templates/blog/posts.html:21
-#: portfolio/templates/portfolio/base.html:57
+#: portfolio/templates/portfolio/index.html:16
 msgid "Intro"
 msgstr "Einleitung"
 
@@ -83,7 +83,7 @@ msgid "Order by views"
 msgstr "Nach Ansichten"
 
 #: blog/templates/blog/posts.html:16 blog/templates/blog/posts.html:29
-#: portfolio/templates/portfolio/base.html:66
+#: portfolio/templates/portfolio/index.html:25
 msgid "Say Hello"
 msgstr "Sag Hallo"
 
@@ -107,122 +107,184 @@ msgstr ""
 "Ich freue mich über Ihre Nachrichten. Wenn Sie Vorschläge haben, bin ich "
 "hier."
 
-#: my_portfolio/settings.py:120
+#: my_portfolio/settings.py:121
 msgid "German"
 msgstr "Deutsch"
 
-#: my_portfolio/settings.py:121
+#: my_portfolio/settings.py:122
 msgid "English"
 msgstr "Englisch"
 
-#: my_portfolio/settings.py:122
+#: my_portfolio/settings.py:123
 msgid "Українська"
 msgstr "Ukrainisch"
 
-#: my_portfolio/settings.py:123
+#: my_portfolio/settings.py:124
 msgid "Russian"
 msgstr "Russisch"
 
-#: portfolio/templates/portfolio/base.html:11
+#: my_portfolio/templates/404.html:8
+msgid "Page Not Found"
+msgstr "Seite nicht gefunden"
+
+#: my_portfolio/templates/404.html:9
+msgid ""
+"Sorry, the page you are looking for does not exist. It may have been moved "
+"or deleted"
+msgstr ""
+"Entschuldigung, die von Ihnen gesuchte Seite existiert nicht. Sie wurde "
+"möglicherweise verschoben oder gelöscht"
+
+#: my_portfolio/templates/404.html:10
+msgid "Go to Homepage"
+msgstr "Gehen Sie zur Startseite"
+
+#: my_portfolio/templates/500.html:8
+msgid "Internal Server Error"
+msgstr "Interner Serverfehler"
+
+#: my_portfolio/templates/500.html:9
+msgid "Oops! Something went wrong on our end. We're working to fix it."
+msgstr "Hoppla! Etwas ist auf unserem Server schiefgelaufen. Wir arbeiten daran, es zu beheben."
+
+#: my_portfolio/templates/base.html:11
 msgid "Welcome"
 msgstr "Willkommen"
 
-#: portfolio/templates/portfolio/base.html:49
+#: my_portfolio/templates/includes/footer.html:8
+msgid "Get In Touch"
+msgstr "Kontakt aufnehmen"
+
+#: my_portfolio/templates/includes/footer.html:12
+msgid "If you need a website or want to hire me, feel free to reach out!"
+msgstr ""
+"Wenn Sie eine Website brauchen oder mich einstellen möchten, schreiben Sie "
+"mir gern!"
+
+#: my_portfolio/templates/includes/footer.html:20
+msgid "Reach me at"
+msgstr "Erreichen Sie mich unter"
+
+#: my_portfolio/templates/includes/footer.html:28
+msgid "Social"
+msgstr "Soziale Netzwerke"
+
+#: my_portfolio/templates/includes/footer.html:37
+msgid "SayHello"
+msgstr "SagHallo"
+
+#: my_portfolio/templates/includes/footer.html:44
+msgid "Site Language"
+msgstr "Seitensprache"
+
+#: portfolio/templates/portfolio/index.html:8
 msgid "Menu"
 msgstr "Menu"
 
-#: portfolio/templates/portfolio/base.html:60
+#: portfolio/templates/portfolio/index.html:19
 msgid "About"
 msgstr "Über mich"
 
-#: portfolio/templates/portfolio/base.html:63
+#: portfolio/templates/portfolio/index.html:22
 msgid "Works"
 msgstr "Projekte"
 
-#: portfolio/templates/portfolio/base.html:69
+#: portfolio/templates/portfolio/index.html:28
 msgid "Blog"
 msgstr "Blog"
 
-#: portfolio/templates/portfolio/base.html:91
+#: portfolio/templates/portfolio/index.html:46
 msgid "I'm Backend Developer"
 msgstr "Ich bin Backend-Entwickler"
 
-#: portfolio/templates/portfolio/base.html:94
+#: portfolio/templates/portfolio/index.html:49
 msgid "Daniil Tkachenko"
 msgstr "Daniil Tkachenko"
 
-#: portfolio/templates/portfolio/base.html:96
+#: portfolio/templates/portfolio/index.html:51
 msgid "Why me"
 msgstr "Warum ich"
 
-#: portfolio/templates/portfolio/base.html:98
+#: portfolio/templates/portfolio/index.html:53
 msgid "Expertise in Django Framework"
 msgstr "Expertise im Django-Framework"
 
-#: portfolio/templates/portfolio/base.html:99
+#: portfolio/templates/portfolio/index.html:54
 msgid "Experience in developing complex systems"
 msgstr "Erfahrung in der Entwicklung komplexer Systeme"
 
-#: portfolio/templates/portfolio/base.html:100
+#: portfolio/templates/portfolio/index.html:55
 msgid "Ability to optimize and scale"
 msgstr "Fähigkeit zur Optimierung und Skalierung"
 
-#: portfolio/templates/portfolio/base.html:101
+#: portfolio/templates/portfolio/index.html:56
 msgid "Expertise in Python"
 msgstr "Expertise in Python"
 
-#: portfolio/templates/portfolio/base.html:106
+#: portfolio/templates/portfolio/index.html:61
 msgid "Integration and Interoperability"
 msgstr "Integration und Interoperabilität"
 
-#: portfolio/templates/portfolio/base.html:107
+#: portfolio/templates/portfolio/index.html:62
 msgid "Collaborative Team Player"
 msgstr "Teamfähiger Mitarbeiter"
 
-#: portfolio/templates/portfolio/base.html:108
+#: portfolio/templates/portfolio/index.html:63
 msgid "Continuous Learning and Adaptability"
 msgstr "Kontinuierliches Lernen und Anpassungsfähigkeit"
 
-#: portfolio/templates/portfolio/base.html:109
+#: portfolio/templates/portfolio/index.html:64
 msgid "Results-oriented approach"
 msgstr "Ergebnisorientierter Ansatz"
 
-#: portfolio/templates/portfolio/base.html:113
+#: portfolio/templates/portfolio/index.html:68
 msgid "Hire me"
 msgstr "Stell mich ein"
 
-#: portfolio/templates/portfolio/base.html:117
+#: portfolio/templates/portfolio/index.html:72
 msgid "My CV"
 msgstr "Lebenslauf"
 
-#: portfolio/templates/portfolio/base.html:138
+#: portfolio/templates/portfolio/index.html:93
 msgid "about"
 msgstr "Über mich"
 
-#: portfolio/templates/portfolio/base.html:141
+#: portfolio/templates/portfolio/index.html:96
 msgid "Knowledge"
 msgstr "ERFAHRUNG"
 
-#: portfolio/templates/portfolio/base.html:153
+#: portfolio/templates/portfolio/index.html:108
 msgid "Experience"
 msgstr "Berufserfahrung"
 
-#: portfolio/templates/portfolio/base.html:164
+#: portfolio/templates/portfolio/index.html:119
 msgid "August 2020 - January 2022"
 msgstr "August 2020 - Januar 2022"
 
-#: portfolio/templates/portfolio/base.html:170
+#: portfolio/templates/portfolio/index.html:125
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                        For a year, I worked as a backend "
+#| "developer, creating websites using Django, and\n"
+#| "                                        utilizing Celery and Redis for "
+#| "task management and caching. My responsibilities\n"
+#| "                                        included developing and "
+#| "integrating APIs, connecting and managing databases, and\n"
+#| "                                        ensuring efficient and robust web "
+#| "application performance.\n"
+#| "                                        "
 msgid ""
 "\n"
-"                                        For a year, I worked as a backend "
-"developer, creating websites using Django, and\n"
-"                                        utilizing Celery and Redis for task "
+"                                For a year, I worked as a backend developer, "
+"creating websites using Django, and\n"
+"                                utilizing Celery and Redis for task "
 "management and caching. My responsibilities\n"
-"                                        included developing and integrating "
-"APIs, connecting and managing databases, and\n"
-"                                        ensuring efficient and robust web "
+"                                included developing and integrating APIs, "
+"connecting and managing databases, and\n"
+"                                ensuring efficient and robust web "
 "application performance.\n"
-"                                        "
+"                                "
 msgstr ""
 "\n"
 "Ein Jahr lang arbeitete ich als Backend-Entwickler, erstellte Websites mit "
@@ -231,37 +293,52 @@ msgstr ""
 "und Verwalten von Datenbanken sowie die Sicherstellung einer effizienten und "
 "robusten Webanwendungsleistung."
 
-#: portfolio/templates/portfolio/base.html:186
+#: portfolio/templates/portfolio/index.html:141
 msgid "Education"
 msgstr "Ausbildung"
 
-#: portfolio/templates/portfolio/base.html:194
+#: portfolio/templates/portfolio/index.html:149
 msgid "KHARKIV NATIONAL UNIVERSITY OF RADIO ELECTRONICS"
 msgstr "Charkiwer Nationale Universität für Radioelektronik"
 
-#: portfolio/templates/portfolio/base.html:197
+#: portfolio/templates/portfolio/index.html:152
 msgid "CyberSecurity"
 msgstr "Cyber-Sicherheit"
 
-#: portfolio/templates/portfolio/base.html:200
+#: portfolio/templates/portfolio/index.html:155
 msgid "April 2016 - June 2020"
 msgstr "April 2016 - Juni 2020"
 
-#: portfolio/templates/portfolio/base.html:205
+#: portfolio/templates/portfolio/index.html:160
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                        Cybersecurity is a set of tools, "
+#| "strategies, security principles, security\n"
+#| "                                        assurances, risk management "
+#| "approaches, actions, training, insurance and\n"
+#| "                                        technologies used to protect "
+#| "cyber media, resources of organizations and users.\n"
+#| "                                        Cybersecurity provides for the "
+#| "achievement and conservation of security features\n"
+#| "                                        of the resources of the "
+#| "organization or users directed against the corresponding\n"
+#| "                                        cyber threats.\n"
+#| "                                        "
 msgid ""
 "\n"
-"                                        Cybersecurity is a set of tools, "
-"strategies, security principles, security\n"
-"                                        assurances, risk management "
-"approaches, actions, training, insurance and\n"
-"                                        technologies used to protect cyber "
-"media, resources of organizations and users.\n"
-"                                        Cybersecurity provides for the "
-"achievement and conservation of security features\n"
-"                                        of the resources of the organization "
-"or users directed against the corresponding\n"
-"                                        cyber threats.\n"
-"                                        "
+"                                Cybersecurity is a set of tools, strategies, "
+"security principles, security\n"
+"                                assurances, risk management approaches, "
+"actions, training, insurance and\n"
+"                                technologies used to protect cyber media, "
+"resources of organizations and users.\n"
+"                                Cybersecurity provides for the achievement "
+"and conservation of security features\n"
+"                                of the resources of the organization or "
+"users directed against the corresponding\n"
+"                                cyber threats.\n"
+"                                "
 msgstr ""
 "\n"
 "Cyber-Sicherheit ist eine Reihe von Werkzeugen, Strategien, "
@@ -271,34 +348,50 @@ msgstr ""
 "sorgt für das Erreichen und Erhalten von Sicherheitsmerkmalen der Ressourcen "
 "der Organisation oder Nutzer gegen entsprechende Cyber-Bedrohungen."
 
-#: portfolio/templates/portfolio/base.html:221
+#: portfolio/templates/portfolio/index.html:176
 msgid "Kyiv National Economic University Romny college"
 msgstr "Romen-College der Kiewer Nationalen Wirtschaftsuniversität"
 
-#: portfolio/templates/portfolio/base.html:224
+#: portfolio/templates/portfolio/index.html:179
 msgid "System Administrator"
 msgstr "Systemadministrator"
 
-#: portfolio/templates/portfolio/base.html:227
+#: portfolio/templates/portfolio/index.html:182
 msgid "August 2012 - June 2016"
 msgstr "August 2012 - Juni 2016"
 
-#: portfolio/templates/portfolio/base.html:232
+#: portfolio/templates/portfolio/index.html:187
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                        I studied at Romensky College of "
+#| "Kyiv National Economic University (KNEU) for 4\n"
+#| "                                        years, specializing in System "
+#| "Administration. During my time there, I gained\n"
+#| "                                        in-depth knowledge and skills in "
+#| "managing and maintaining information systems,\n"
+#| "                                        configuring servers, handling "
+#| "network devices, ensuring system security, and\n"
+#| "                                        providing technical support to "
+#| "users. This comprehensive education has equipped\n"
+#| "                                        me with the expertise needed to "
+#| "excel in the field of System Administration.\n"
+#| "                                        "
 msgid ""
 "\n"
-"                                        I studied at Romensky College of "
-"Kyiv National Economic University (KNEU) for 4\n"
-"                                        years, specializing in System "
+"                                I studied at Romensky College of Kyiv "
+"National Economic University (KNEU) for 4\n"
+"                                years, specializing in System "
 "Administration. During my time there, I gained\n"
-"                                        in-depth knowledge and skills in "
-"managing and maintaining information systems,\n"
-"                                        configuring servers, handling "
-"network devices, ensuring system security, and\n"
-"                                        providing technical support to "
-"users. This comprehensive education has equipped\n"
-"                                        me with the expertise needed to "
-"excel in the field of System Administration.\n"
-"                                        "
+"                                in-depth knowledge and skills in managing "
+"and maintaining information systems,\n"
+"                                configuring servers, handling network "
+"devices, ensuring system security, and\n"
+"                                providing technical support to users. This "
+"comprehensive education has equipped\n"
+"                                me with the expertise needed to excel in the "
+"field of System Administration.\n"
+"                                "
 msgstr ""
 "\n"
 "Ich studierte vier Jahre am Romen-College der Kiewer Nationalen "
@@ -310,40 +403,14 @@ msgstr ""
 "dem nötigen Fachwissen ausgestattet, um im Bereich der Systemadministration "
 "erfolgreich zu sein."
 
-#: portfolio/templates/portfolio/base.html:257
+#: portfolio/templates/portfolio/index.html:212
 msgid "Recent Works"
 msgstr "Letzte Projekte"
 
-#: portfolio/templates/portfolio/base.html:261
+#: portfolio/templates/portfolio/index.html:216
 msgid "Here are some of my projects. Feel free to check them out."
 msgstr "Hier sind einige meiner Projekte. Schau sie dir gerne an!"
 
-#: portfolio/templates/portfolio/base.html:302
+#: portfolio/templates/portfolio/index.html:257
 msgid "What tools I used"
 msgstr "Welche Werkzeuge ich verwendet habe"
-
-#: portfolio/templates/portfolio/includes/footer.html:8
-msgid "Get In Touch"
-msgstr "Kontakt aufnehmen"
-
-#: portfolio/templates/portfolio/includes/footer.html:12
-msgid "If you need a website or want to hire me, feel free to reach out!"
-msgstr ""
-"Wenn Sie eine Website brauchen oder mich einstellen möchten, schreiben Sie "
-"mir gern!"
-
-#: portfolio/templates/portfolio/includes/footer.html:20
-msgid "Reach me at"
-msgstr "Erreichen Sie mich unter"
-
-#: portfolio/templates/portfolio/includes/footer.html:28
-msgid "Social"
-msgstr "Soziale Netzwerke"
-
-#: portfolio/templates/portfolio/includes/footer.html:37
-msgid "SayHello"
-msgstr "SagHallo"
-
-#: portfolio/templates/portfolio/includes/footer.html:44
-msgid "Site Language"
-msgstr "Seitensprache"
